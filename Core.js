@@ -2515,14 +2515,15 @@ case 'purge':{
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
-
+const delay = time => new Promise(res=>setTimeout(res,time));
 let members_id = participants.map(v => v.jid)
 let mentioned = members_id
 //let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
       for (let member of mentioned) {
       //if (member.endsWith('@s.whatsapp.net')) 
-      //await delay(3000)
-      await Miku.groupRemove(from, members_id)
+      await delay(3000)
+      await Miku.groupParticipantsUpdate(m.chat, [members_id], 'remove')
+      //await Miku.groupRemove(from, members_id)
       }
      await m.reply(m.chat, 'Removed everyone!', m)
 
