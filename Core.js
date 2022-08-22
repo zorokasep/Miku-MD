@@ -2496,7 +2496,6 @@ if (isBanChat) return reply(mess.bangc)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
 
-     let handler = async (m, { conn }) => {
         const delay = time => new Promise(res=>setTimeout(res,time));
 
         let users = (await conn.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
@@ -2505,8 +2504,7 @@ if (isBanChat) return reply(mess.bangc)
             await Miku.groupParticipantsUpdate(m.chat, [user], 'remove')
             await delay(3000)
         }
-      }
-
+    }
      break
 
 
