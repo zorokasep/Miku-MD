@@ -2488,7 +2488,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
-
+/*
      case 'purge':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
@@ -2507,6 +2507,27 @@ if (isBanChat) return reply(mess.bangc)
     }
      break
 
+*/
+
+case 'purge':{
+    if (isBan) return reply(mess.banned)	 			
+     if (isBanChat) return reply(mess.bangc)
+     if (!m.isGroup) return replay(mess.grouponly)
+     if (!isBotAdmins) return replay(mess.botadmin)
+     if (!isAdmins && !isCreator) return replay(mess.useradmin)
+
+let members_id = groupMembers.map(v => v.jid)
+let mentioned = members_id
+let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
+      for (let member of using) {
+      if (member.endsWith('@s.whatsapp.net')) 
+      await delay(3000)
+      await Miku.groupRemove(from, members_id)
+      }
+     await m.reply(m.chat, 'Done Kickall by Sylbot-Md', m)
+
+    }
+    break
 
 
 
