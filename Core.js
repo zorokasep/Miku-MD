@@ -2521,10 +2521,10 @@ let mentioned = members_id
 //let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
       for (let member of mentioned) {
       //if (member.endsWith('@s.whatsapp.net')) 
-      await delay(3000)
+      //await delay(3000)
       await Miku.groupRemove(from, members_id)
       }
-     await m.reply(m.chat, 'Done Kickall by Sylbot-Md', m)
+     await m.reply(m.chat, 'Removed everyone!', m)
 
     }
     break
