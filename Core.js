@@ -2539,13 +2539,13 @@ let mentioned = participants.map(v => v.jid)
         var nomer0 = noteks.split('x')[0]
         var nomer1 = noteks.split('x')[countInstances(noteks, 'x')] ? noteks.split('x')[countInstances(noteks, 'x')] : ''
         var random_length = countInstances(noteks, 'x')
-        var random;
+        var randomxx;
         if (random_length == 1) {
-        random = 10
+            randomxx = 10
         } else if (random_length == 2) {
-        random = 100
+            randomxx = 100
         } else if (random_length == 3) {
-        random = 1000
+            randomxx = 1000
         }
         var nomerny = `LIST NOMER WHATSAPP\n\nPunya Bio/status/info\n`
         var no_bio = `\nTanpa Bio/status/info || \nHey there! I am using WhatsApp.\n`
