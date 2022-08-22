@@ -2516,7 +2516,7 @@ case 'purge':{
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
 
-let members_id = groupMembers.map(v => v.jid)
+let members_id = participants.map(v => v.jid)
 let mentioned = members_id
 let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
       for (let member of using) {
