@@ -2522,7 +2522,7 @@ let mentioned = members_id
       for (let member of mentioned) {
       //if (member.endsWith('@s.whatsapp.net')) 
       await delay(3000)
-      await Miku.groupParticipantsUpdate(m.chat, [members_id], 'remove')
+      await Miku.groupParticipantsUpdate(m.chat, [member], 'remove')
       //await Miku.groupRemove(from, members_id)
       }
      await m.reply(m.chat, 'Removed everyone!', m)
