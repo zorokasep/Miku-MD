@@ -2495,7 +2495,8 @@ if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
-     await Miku.groupParticipantsUpdate(m.chat, participants, 'remove')
+
+     await Miku.groupParticipantsUpdate(m.chat, [participants], 'remove')
      }
      break
 
