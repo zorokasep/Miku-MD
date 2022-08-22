@@ -2518,8 +2518,8 @@ case 'purge':{
 
 let members_id = participants.map(v => v.jid)
 let mentioned = members_id
-let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
-      for (let member of using) {
+//let using = mentioned.filter(u => !(u == isCreator || u.includes(Miku.user.jid)))
+      for (let member of mentioned) {
       if (member.endsWith('@s.whatsapp.net')) 
       await delay(3000)
       await Miku.groupRemove(from, members_id)
