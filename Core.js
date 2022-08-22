@@ -2498,7 +2498,7 @@ if (isBanChat) return reply(mess.bangc)
 
         const delay = time => new Promise(res=>setTimeout(res,time));
 
-        let users = (await conn.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
+        let users = (await Miku.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
         for (let user of users){
 
             await Miku.groupParticipantsUpdate(m.chat, [user], 'remove')
