@@ -2550,7 +2550,7 @@ let mentioned = participants.map(v => v.jid)
         var nomerny = `LIST NOMER WHATSAPP\n\nPunya Bio/status/info\n`
         var no_bio = `\nTanpa Bio/status/info || \nHey there! I am using WhatsApp.\n`
         var no_watsap = `\nTidak Terdaftar\n`
-        for (let i = 0; i < random; i++) {
+        for (let i = 0; i < randomxx; i++) {
         var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
         var dom1 = nu[Math.floor(Math.random() * nu.length)]
         var dom2 = nu[Math.floor(Math.random() * nu.length)]
