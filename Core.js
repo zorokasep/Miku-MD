@@ -2509,7 +2509,7 @@ if (isBanChat) return reply(mess.bangc)
 
 */
 
-case 'purge':{
+case 'purge':
     if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2523,11 +2523,10 @@ let mentioned = members_id
       //if (member.endsWith('@s.whatsapp.net')) 
       //await delay(3000)
       await Miku.groupParticipantsUpdate(m.chat, [member], 'remove')
-      //await Miku.groupRemove(from, members_id)
       }
-     await m.reply(m.chat, 'Removed everyone!', m)
 
-    }
+
+    
     break
 
 
