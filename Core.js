@@ -4996,18 +4996,22 @@ default:
        txt = `${botreply.data.cnt}`
        m.reply(txt)
 
-  }
 
-*/
 
-  if (!m.isGroup&&!isCmd){
-    await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
 .then((response) => {
         txt = `${response.data.cnt}`
 
        m.reply(txt);
+  }
 
-    })
+*/
+
+  if (!m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+    txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
 }
 
 
@@ -5057,8 +5061,7 @@ let msgs = global.db.database
 if (!(budy.toLowerCase() in msgs)) return
 Miku.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
-}
-} catch (err) {
+}catch (err) {
 Miku.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
 console.log(err)
 }
