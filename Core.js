@@ -237,6 +237,17 @@ const isImage = (m.type === 'imageMessage')
         const isQuotedReply = m.mtype === 'extendedTextMessage' && content.includes('Message')
 
 
+
+// DM chatbot
+
+if (!isCmd && !m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
+    txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
+
+
+
 _sewa.expiredCheck(Miku, sewa)
 
 const reply = (teks) => {
@@ -5008,15 +5019,15 @@ await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid
 
 */
 
-  if (notCmd && !m.isGroup){
+  if (!isCmd && !m.isGroup){
     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
     txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
-}
 
 
 
+    
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.botowner)
 function Return(sul) {
@@ -5061,6 +5072,7 @@ if (m.isBaileys) return
 let msgs = global.db.database
 if (!(budy.toLowerCase() in msgs)) return
 Miku.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+}
 }
 }catch (err) {
 Miku.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
