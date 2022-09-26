@@ -149,16 +149,16 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hello @${WAuserName.split("@")[0]},
+Namaste @${WAuserName.split("@")[0]},
 
-I am *Miku Nakano*, Welcome to ${metadata.subject}.
+I am *Yumeko*, Welcome to ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
 `
 
     let buttonMessage = {
-    image: await getBuffer(ppgroup),
+    image: await getBuffer(ppuser),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
