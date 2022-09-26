@@ -14,7 +14,7 @@ global.BotName = "Yumeko"
 global.packname = "Yumeko bot"
 global.author = "By: Smokey"
 global.OwnerName = "Smokey"
-global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
+global.BotSourceCode = "https://github.com/Lasanop/Yumeko"
 global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
 global.sessionName = "session"
 
