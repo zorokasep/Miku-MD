@@ -76,11 +76,11 @@ Miku.ev.on('groups.update', async pea => {
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Miku.send5ButImg(pea[0].id, `Grup telah *Ditutup*!* Hanya *Admin* Yang bisa mengirim pesan!`, `${BotName}`, wm_fatih, [])
        } else if(pea[0].announce == false) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Miku.send5ButImg(pea[0].id, `Grup telah *Dibuka!* Sekarang *Semua orang* Bisa mengirim pesan!`, `${BotName}`, wm_fatih, [])
        } else {
-       Miku.send5ButImg(pea[0].id, `Group Subject has been updated to *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
+       Miku.send5ButImg(pea[0].id, `Subjek Grup Telah DiUbah Menjadi *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
      }
     })
 */
@@ -95,12 +95,12 @@ Miku.ev.on('groups.update', async pea => {
         }
         let wm_fatih = { url : ppgc }
         if (pea[0].announce == true) {
-        //Miku.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `Miku Bot`, wm_fatih, [])
+        //Miku.send5ButImg(pea[0].id, `Grup telah *Ditutup*!* Hanya *Admin* Yang bisa mengirim pesan!`, `Miku Bot`, wm_fatih, [])
 
-        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grup telah *Ditutup*!* Hanya *Admin* Yang bisa mengirim pesan!'})
         } else if(pea[0].announce == false) {
        // Miku.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `Miku Bot`, wm_fatih, [])
-       Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
+       Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grup telah *Dibuka!* Sekarang *Semua orang* Bisa mengirim pesan!'})
         } else if (pea[0].restrict == true) {
         //Miku.send5ButImg(pea[0].id, `Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`, `Miku Bot`, wm_fatih, [])
         Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
@@ -108,8 +108,8 @@ Miku.ev.on('groups.update', async pea => {
         //Miku.send5ButImg(pea[0].id, `Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !`, `Miku Bot`, wm_fatih, [])
         Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !'})
         } else {
-        //Miku.send5ButImg(pea[0].id, `Group Subject has been uhanged To:\n\n*${pea[0].subject}*`, `Miku Bot`, wm_fatih, [])
-        mikutextddfq =`Group Subject has been updated To:\n\n*${pea[0].subject}*`
+        //Miku.send5ButImg(pea[0].id, `Subjek Grup Telah DiUbah Menjadi:\n\n*${pea[0].subject}*`, `Miku Bot`, wm_fatih, [])
+        mikutextddfq =`Subjek Grup Telah DiUbah Menjadi:\n\n*${pea[0].subject}*`
         Miku.sendMessage(pea[0].id, { image: wm_fatih, caption: mikutextddfq})
       }
      })
@@ -149,11 +149,11 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hello @${WAuserName.split("@")[0]},
+Hallo bang! @${WAuserName.split("@")[0]},
 
-I am *Miku Nakano*, Welcome to ${metadata.subject}.
+Saya *Miku Nakano*, Harap baca deskripsi group terlebih dahulu! Selamat Datang Di  ${metadata.subject}.
 
-*Group Description:*
+*Deskripsi Grup:*
 ${metadata.desc}
 `
 
@@ -168,9 +168,9 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-Sayonara 👋, @${WAuserName.split("@")[0]},
+Selamat Tinggal! 👋, @${WAuserName.split("@")[0]},
 
-I hope you will come back soon, but we are not going to miss you though!
+Semoga tenang dialam sana. woy admin tolol , kalo dia masuk lagi banned aja!
 `
 
     let buttonMessage = {
