@@ -170,7 +170,8 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 Selamat Tinggal! 👋, @${WAuserName.split("@")[0]},
 
-Semoga tenang dialam sana. woy admin tolol , kalo dia masuk lagi banned aja!
+Semoga tenang dialam sana. 
+woy *Admin* tolol , kalo dia masuk lagi banned aja langsung!
 `
 
     let buttonMessage = {
