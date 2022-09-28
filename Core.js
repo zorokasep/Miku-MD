@@ -1330,7 +1330,7 @@ const ftroli = {
 
 
     const menulist = `
-    Hello ${pushname} dear 👋. I am ${private.BotName}, a bot developed by: Smokey to take your WhatsApp usage into next level.
+    Hello ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Smokey to take your WhatsApp usage into next level.
         
        「 System Info 」
     
