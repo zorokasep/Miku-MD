@@ -3391,7 +3391,7 @@ case 'play':
   buttons: buttons,
   headerType: 4
   }
-  Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
+  ichi.sendMessage(m.chat, buttonMessage, { quoted: m })
   break
 
  case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
