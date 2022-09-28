@@ -1181,11 +1181,11 @@ let cron = require('node-cron')
                                },
                   message: { 
                                 "videoMessage": { 
-                                "title": `Miku`,
-                                "h": `Miku`,
+                                "title": `Yumeko`,
+                                "h": `Yumeko`,
                                 'duration': '99999', 
                                 'gifPlayback': 'true', 
-                                'caption': `Fantox`,
+                                'caption': `Smokey`,
                                 'jpegThumbnail': fs.readFileSync('./Assets/miku.mp4')
                                        }
                                       }
@@ -1242,8 +1242,8 @@ const ftroli = {
   },
   message: { 
   "videoMessage": { 
-  "title": `${global.BotName}`,
-  "h": `${global.OwnerName}`,
+  "title": `${private.BotName}`,
+  "h": `${private.OwnerName}`,
   'seconds': '30', 
   'caption': `${global.WaterMark}`,
   'jpegThumbnail': BotLogo
@@ -1260,9 +1260,9 @@ const ftroli = {
   "message": {
   "groupInviteMessage": {
   "groupJid": "916909137213-1616169743@g.us",
-  "inviteCode": `${global.OwnerName}`,
-  "groupName": `${global.BotName}`, 
-  "caption":`${global.WaterMark}`, 
+  "inviteCode": `${private.OwnerName}`,
+  "groupName": `${private.BotName}`, 
+  "caption":`${private.WaterMark}`, 
   'jpegThumbnail': BotLogo
   }
   }
@@ -1422,7 +1422,7 @@ case 'me': case 'profile': case 'p':
     
           } catch (e) {
      
-      pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
+      pfp ='https://images.app.goo.gl/oejYHUWwkXc4h9BM8'
     }
 
      const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
