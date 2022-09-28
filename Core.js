@@ -1517,7 +1517,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━〈  📛 Hentai MENU 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -1558,7 +1558,7 @@ case 'film': case 'movie': case 'moviesearch':
 if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
 	reply(mess.waiting)
-if (!q) return reply(`Please enter a Movie search term...\nExample: ${prefix}movie Spiderman`)
+if (!q) return reply(`Tolong masukkan judulnya...\nContoh: ${prefix}movie Spiderman`)
 xfarrapi.Film(q)
     .then(data => {console.log(data)
     let krl = `*Search Term:* ${q}\n\n`
@@ -1822,7 +1822,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
- let teks = ` 「  Miku's pm user list  」\n\nTotal ${anu.length} users are using Miku in personal chat.`
+ let teks = ` 「  Isi Chat Miku  」\n\nTotal ${anu.length} Orang yang ngechat miku.`
  for (let i of anu) {
   teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
  }
@@ -1834,7 +1834,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
- let teks = ` 「  Miku's group user list  」\n\nTotal ${anu.length} users are using bot in Groups.`
+ let teks = ` 「  List Grup Miku  」\n\nTotal ada ${anu.length} Grup yang menggunakan Miku.`
  for (let i of anu) {
   let metadata = await Miku.groupMetadata(i)
   if (metadata.owner === "undefined") {
@@ -1842,7 +1842,7 @@ await Miku.sendMessage(m.chat, { delete: key })
   } else {
   loldd = metadata.owner
   }
-  teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
+  teks += `\n\nNama Grup : ${metadata.subject ? metadata.subject : "undefined"}\nAdmin : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\ntanggal grup dibuat : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nAnggota : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
  }
  Miku.sendTextWithMentions(m.chat, teks, m)
  }
@@ -1854,7 +1854,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  let user = global.db.users[m.sender]
  user.afkTime = + new Date
  user.afkReason = args.join(" ")
- replay(`${m.pushName} is now Away From Keyboard.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
+ replay(`${m.pushName} Sekarang lagi afk.\nAlasan AFK : ${args.join(" ") ? args.join(" ") : ''}`)
  }
  break
 
@@ -2239,25 +2239,25 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (args[0] === "on") {
  if (AntiNsfw) return replay('Already activated')
  ntnsfw.push(from)
- replay('Enabled NSFW Commands!')
+ replay('Mode Bokep telah diaktifkan!')
  var groupe = await Miku.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(Intinya bokep) Fitur itu telah diaktifkan, yang berarti semua member bisa akses gambar bokep kartun!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!AntiNsfw) return replay('Already deactivated')
  let off = ntnsfw.indexOf(from)
  ntnsfw.splice(off, 1)
- replay('Disabled NSFW Commands!')
+ replay('Mode bokep sudah dimatikan!')
  } else {
    let buttonsntnsfw = [
-   { buttonId: `-nsfw on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `-nsfw off`, buttonText: { displayText: 'Off' }, type: 1 }
+   { buttonId: `-Bokep on`, buttonText: { displayText: 'On' }, type: 1 },
+   { buttonId: `-Bokep off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Silahkeun Klik tombol ini\n\nOn Ini untuk aktifin\nIni untuk matiin`, `${global.BotName}`, m)
    }
    }
    break
@@ -2267,7 +2267,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`Pilih banned or Unbanned (add untuk banned, del untuk unbanned), Contoh: Balas pesan orang yg mau dibanned dengan *${prefix}ban add* .`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2277,12 +2277,12 @@ const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
 if (isBane) return ads('User is already banned.')
 banUser.push(orgnye)
-replay(`Successfully Banned the user.`)
+replay(`Orang itu telah dibanned, mampos!!!.`)
 } else if (args[0] === "del") {
 if (!isBane) return ads('User is already unbanned.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully Unbanned the user.`)
+replay(`Orang itu sudah di unbanned , jangan tengil lagi yah!.`)
 } else {
 replay("Error")
 }
@@ -2297,7 +2297,7 @@ case 'listonline': case 'listaktif': case 'here':{
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
- Miku.sendText(m.chat, '  「 *Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ Miku.sendText(m.chat, '  「 *Member yang lagi aktif* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
 
@@ -2305,7 +2305,7 @@ case 'listonline': case 'listaktif': case 'here':{
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`Pilih mau di banned atau Unbanned (add untuk banned, del untuk unbanned), Contoh: Balas pesan orang yg mau dibanned dengan *${prefix}ban add* `)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2315,12 +2315,12 @@ const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
 if (isBane) return ads('User was already banned.')
 banUser.push(orgnye)
-replay(`Successfully banned the user`)
+replay(`orang itu berhasil dibanned. Mampua kau ,mampua!`)
 } else if (args[0] === "del") {
 if (!isBane) return ads('User was already unbanned.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user.`)
+replay(`Orang itu telah diunbanned, jangan tengil lagi deck!.`)
 } else {
 replay("Error")
 }
@@ -2357,13 +2357,13 @@ case 'happymod': {
  case 'yts': case 'ytsearch': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args.join(" ")) return replay(`Example : -yts Heat waves`)
+ if (!args.join(" ")) return replay(`Ketik Judul tot. Contoh : -yts Asede Kontol`)
  let yts = require("yt-search")
  let search = await yts(args.join(" "))
- let teks = '```「 YouTube search Engine 」```\n\n Search Term: '+text+'\n\n'
+ let teks = '```「 YouTube search Engine 」```\n\n Kata Kunci: '+text+'\n\n'
  let no = 1
  for (let i of search.all) {
- teks += `Result No : ${no++}\n\nTitle : ${i.title}\n\nViews : ${i.views}\n\nDuration : ${i.timestamp}\n\nUploaded : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
+ teks += `Hasil Nomer : ${no++}\n\nTitle : ${i.title}\n\nPenonton : ${i.views}\n\nDurasi : ${i.timestamp}\n\nDiupload : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
  }
  Miku.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
  }
@@ -2560,7 +2560,7 @@ let mentioned = participants.map(v => v.jid)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let response = await Miku.groupInviteCode(m.chat)
- Miku.sendMessage(m.chat, {text:`*Group Name:* *${groupMetadata.subject}* \n\n*Group Link :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
+ Miku.sendMessage(m.chat, {text:`*Nama Grup:* *${groupMetadata.subject}* \n\n*Link Grup :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
  mimetype: "image/jpeg",
  text: `${global.OwnerName}`,
  "forwardingScore": 1000000000,
@@ -2608,8 +2608,8 @@ let mentioned = participants.map(v => v.jid)
      await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Group has been opened!`)).catch((err) => replay(jsonformat(err)))
      } else {
      let buttons = [
-     { buttonId: '-group open', buttonText: { displayText: 'Open' }, type: 1 },
-     { buttonId: '-group close', buttonText: { displayText: 'Close' }, type: 1 }
+     { buttonId: '-group open', buttonText: { displayText: 'Buka' }, type: 1 },
+     { buttonId: '-group close', buttonText: { displayText: 'Tutup' }, type: 1 }
      ]
      let buttonMessage = {
      image: BotLogo,
@@ -2795,7 +2795,7 @@ let qsd = args.join(" ")
 if (typeof mathjs.evaluate(qsd) !== 'number') {
 reply('Error')
 } else {
-reply(`\`\`\`「 _Calculator Tool_ 」\`\`\`\n\n*Input :* ${qsd}\n*Calculation Result :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
+reply(`\`\`\`「 _Alat Hitung_ 」\`\`\`\n\n*Input :* ${qsd}\n*Hasilnya :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
 }
 }
 break
@@ -2805,7 +2805,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
  Miku.public = true
- reply('I am now Publicly accessable!')
+ reply('Sekarang aku bisa diewe- digunakan oleh semua orang!')
  Miku.setStatus(`Mode : Public`)
  }
  break
@@ -2815,7 +2815,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
  Miku.public = false
- reply('Only Owner can use me now!')
+ reply('Sekarang Cuma owner yang bisa ngen- menggunakan aku!')
  Miku.setStatus(`Mode : Self`)
  }
  break
@@ -2921,7 +2921,7 @@ case 'togif': case 'getgif':{
 
 case 'translate': case 'trans': {
     if (isBan) return reply(mess.banned)
-    if (!args.join(" ")) return replay("Pls enter any text to translate")
+    if (!args.join(" ")) return replay("Masukin kata-katanya lah")
     tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
     Infoo = tes.info
     Detek = tes.translate
@@ -2961,7 +2961,7 @@ break
 case 'google': case 'search': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
+ if (!args[0]) return reply(`Contoh: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
  let google = require('google-it')
  google({'query': args.join(" ")}).then(res => {
  let teks = `「 *Google Search Engine* 」\n\n*Search term:* ${text}\n\n\n`
@@ -3029,7 +3029,7 @@ break
 case 'mp4' : {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply(`Pls provide link!`)
+if (!args[0]) return reply(`Taro linknya bang`)
 try {
 Miku.sendMessage(from, {video:{url:args[0]}, caption:"Succes!", contextInfo:{externalAdReply:{
 title:`${global.BotName}`,
@@ -3040,7 +3040,7 @@ mediaUrl: `${global.websitex}`,
 sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 } catch {
-reply("Link error!")
+reply("Link Eror kek otakmu!")
 }
 }
 break
@@ -3052,7 +3052,7 @@ if (isBanChat) return reply(mess.bangc)
  try {
  Miku.sendMessage(from, {image:{url:args[0]}, caption:"Success!"}, {quoted:m})
  } catch {
- reply("Link error")
+ reply("Link Eror kek otakmu!")
  }
  }
  break
@@ -3136,7 +3136,7 @@ headerType: 4,
 }
 Miku.sendMessage(from, buttonMessage, {quoted:m})
 } catch {
-reply("Link Error!")
+reply("Link Eror kek otakmu!")
 }
 }
 break
@@ -3162,15 +3162,15 @@ case 'twddlxx': {
  case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
-              if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+              if (!text) return reply(`Taro linknya Njeng! \n\nContoh: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
              let bocil = require('@bochilteam/scraper')  
                  bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                      let txt = `「 _Facebook Downloader_ 」\n\n`
-                     txt += `*Title :* ${data.title}\n`
-                     txt += `*Quality :* ${data.result[0].quality}\n`
-                     txt += `*Description:* ${data.description}\n`
-                     txt += `*URL :* ${text}\n\n`
+                     txt += `*Judul :* ${data.title}\n`
+                     txt += `*Resolusi :* ${data.result[0].quality}\n`
+                     txt += `*Deskripsi:* ${data.description}\n`
+                     txt += `*Link :* ${text}\n\n`
                  buf = await getBuffer(data.thumbnail)    
                  Miku.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m })         
                  for (let i of data.result) {     
@@ -3185,7 +3185,7 @@ case 'twddlxx': {
 case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-                  if (!text) return reply(`Please provide the link!\n\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                  if (!text) return reply(`Taro linknya lah bangsad! \n\nContoh: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                   if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
   let noh = require('@bochilteam/scraper')                
   noh.savefrom(`${text}`).then(async (anu) => {  
@@ -3200,14 +3200,14 @@ if (isBanChat) return reply(mess.bangc)
 case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
+if (!args[0]) return reply(`Contoh :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
 try {
 let resd = await aiovideodl(args[0])
 teks = `「 _Facebook Downloader_ 」
-Type : video/${resd.medias[0].extension}
-Quality : ${resd.medias[0].quality}
-Size : ${resd.medias[0].formattedSize}
-_Click the button below to download_`
+Tipe : video/${resd.medias[0].extension}
+Kualitas : ${resd.medias[0].quality}
+Ukuran : ${resd.medias[0].formattedSize}
+_Klik tombol dibawah untuk mendownload_`
 let buttons = [
 {buttonId: `-fbdl ${resd.medias[1].url}`, buttonText: {displayText: 'QualityHD'}, type: 1}
 ]
@@ -3386,10 +3386,10 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  image: { url: anu.thumbnail },
  caption: `「  _Miku Youtube Player_  」
 
-*Title :* ${anu.title}
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
+*Judul :* ${anu.title}
+*Durasi :* ${anu.timestamp}
+*Penonton :* ${anu.views}
+*Diupload :* ${anu.ago}
 *Channel :* ${anu.author.name}
 *Url :* ${anu.url}`,
  footer: `${global.BotName}`,
@@ -3427,7 +3427,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  Miku.sendMessage(from, buttonMessage, {quoted:m})
  }).catch(_ => _)
  } catch {
- reply("Link error!")
+ reply("Link Eror kek otakmu!")
  }
  }
  break
@@ -3456,7 +3456,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
    if (data.medias[0].formattedSize.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(data)) 
    cap = `
    「  *Youtube Shorts*  」
- *TITLE:* ${data.title}\n*QUALITY:* ${data.medias[0].quality}\n*SIZE:* ${data.medias[0].formattedSize}\n*DURATION* ${data.duration}\n*LINK:* ${data.url}\n\n*${BotName}*`
+ *JUDUL:* ${data.title}\n*KUALITAS:* ${data.medias[0].quality}\n*UKURAN:* ${data.medias[0].formattedSize}\n*DURASI* ${data.duration}\n*LINK:* ${data.url}\n\n*${BotName}*`
    buf = await getBuffer(data.thumbnail)
    Miku.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${cap}` }, { quoted: m })
    Miku.sendMessage(m.chat, { video: { url: data.medias[0].url }, jpegThumbnail:buf, caption: `*TITLE:* ${data.title}\n*QUALITY:* ${data.medias[0].quality}\n*SIZE:* ${data.medias[0].formattedSize}` }, { quoted: m })  
@@ -3473,8 +3473,8 @@ if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
-         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `For him...` }, { quoted: m })
-         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `For her...` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `Untuk Cowok...` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `Untuk Cewek...` }, { quoted: m })
      }
  break
 
@@ -3483,12 +3483,12 @@ if (isBanChat) return reply(mess.bangc)
     if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
 let { yta } = require('./lib/y2mate')
-if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+if (!text) return reply(`Contoh : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid`)
 let quality = args[1] ? args[1] : '128kbps'
 let media = await yta(text, quality)
 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
-let caption = `*「 Youtube Music 」*\n\n*Title :* ${media.title}\n*File size :* ${media.filesizeF}\n*Url :* ${isUrl(text)}\n*Ext :* MP3\n*Resolution :* ${args[1] || '128kbps'}`
+let caption = `*「 Youtube Music 」*\n\n*Judul :* ${media.title}\n*Ukuran File :* ${media.filesizeF}\n*Url :* ${isUrl(text)}\n*Ext :* MP3\n*Resolusi :* ${args[1] || '128kbps'}`
 buf = await getBuffer(media.thumb)
 Miku.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${caption}` }, { quoted: m }).catch((err) => reply(mess.error))                
 Miku.sendMessage(m.chat, {audio:{url:media.dl_link}, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{title:media.title,body:"YOUTUBE MP3",mediaType:"2",thumbnail:buf,mediaUrl:`${text}`}}}).catch((err) => reply(mess.error))
@@ -3500,12 +3500,12 @@ case 'ytmp4x': case 'ytvideox': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 let { ytv } = require('./lib/y2mate')
-if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
+if (!text) return reply(`Contoh : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid!`)
 let quality = args[1] ? args[1] : '360p'
 let media = await ytv(text, quality)
 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
-var capti = `*「 Youtube Video 」*\n\n*Title* : ${media.title}\n*File size* : ${media.filesizeF}\n*Url* : ${isUrl(text)}\n*Ext* : Mp4\n*Resoultion* : ${args[1] || '360p'}`
+var capti = `*「 Youtube Video 」*\n\n*Judul* : ${media.title}\n*Ukuran File * : ${media.filesizeF}\n*Url* : ${isUrl(text)}\n*Ext* : Mp4\n*Resolusi* : ${args[1] || '360p'}`
 var buf = await getBuffer(media.thumb)
 Miku.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${capti}` }, { quoted: m })
 Miku.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `Here you go!` }, { quoted: m }).catch((err) => reply(mess.error))
@@ -3575,7 +3575,7 @@ let media = await quoted.download()
 let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 seconds is allowed!`)
+reply(`Kirim Foto/Video ${prefix + command}\nCuma Durasi vidio 1-9 detik yang dibolehin!`)
 }
 }
 break
@@ -3587,9 +3587,9 @@ case 'smeme': case 'stickermeme': case 'stickmeme': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 let { TelegraPh } = require('./lib/uploader')
-if (!text) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-if (text.includes('|')) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-if (!/image/.test(mime)) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
+if (!text) return reply(`Kirim/Balas Fotonya dengan text ${prefix + command} *text*`)
+if (text.includes('|')) return reply(`Kirim/Balas Fotonya dengan textnya ${prefix + command} *text*`)
+if (!/image/.test(mime)) return reply(`Kirim/Balas Fotonya dengan textnya ${prefix + command} *text*`)
 reply(mess.wait)
 mee = await Miku.downloadAndSaveMediaMessage(quoted)
 mem = await TelegraPh(mee)
@@ -3612,7 +3612,7 @@ case 'sgif': case 'sticker': case 's': {
  let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else {
- reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+ reply(`Kirim Foto/Video dengan textnya ${prefix + command}\nDurasi Vidio 1-9 Detik`)
  }
  }
  break
@@ -3656,10 +3656,10 @@ let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
 let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-Ohh i see 👀💖...`
+Ohh ini toh 👀💖...`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'Congratulations ❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'Selamat Mengewe❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
@@ -3672,11 +3672,11 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let me = m.sender
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `👫 Soulmates
+let jawab = `👫 Belahan Jiwaku
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'Be my Soulmate ❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'Jadilah belahan Jiwaku ❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
@@ -3685,18 +3685,18 @@ break
 case 'handsomecheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Seseorang, Contoh : ${prefix + command} @Mamat Asu`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
-Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
+Miku.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nJawaban : *${teng}%*` }, { quoted: m })
 					break
 case 'beautifulcheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Seseorang, Contoh : ${prefix + command} @mamat Pedo`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
-Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
+Miku.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nJawaban : *${tik}%*` }, { quoted: m })
 					break
 
 case 'awesomecheck':
@@ -3710,111 +3710,64 @@ case 'awesomecheck':
                       case 'uglycheck':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Seseorang, Contoh : ${prefix + command} @Mamat Stress`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
-Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
+Miku.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nJawaban : *${sange}%*` }, { quoted: m })
 					break
 
 
 case 'charactercheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+					if (!text) return replay(`Tag Seseorang, Contoh : ${prefix + command} @mamat titit kecil`)
 					const Mikutttt =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
                    
- case 'dare':
+ case 'tantangan':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-                   const dare =[
-         "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
-         "spill people who make you pause",
-         "call crush/pickle now and send ss",
-         "drop only emote every time you type on gc/pc for 1 day.",
-         "say Welcome to Who Wants To Be a Millionaire! to all the groups you have",
-         "call ex saying miss",
-         "sing the chorus of the last song you played",
-         "vn your ex/crush/girlfriend, says hi (name), wants to call, just a moment. I miss🥺👉🏼👈🏼",
-         "Bang on the table (which is at home) until you get scolded for being noisy",
-         "Tell random people - I was just told I was your twin first, we separated, then I had plastic surgery. And this is the most ciyusss_ thing",
-         "mention ex's name",
-         "make 1 rhyme for the members!",
-         "send ur whatsapp chat list",
-         "chat random people with gheto language then ss here",
-         "tell your own version of embarrassing things",
-         "tag the person you hate",
-         "Pretending to be possessed, for example: possessed by dog, possessed by grasshoppers, possessed by refrigerator, etc.",
-         "change name to *I AM DONKEY* for 24 hours",
-         "shout *ma chuda ma chuda ma chuda* in front of your house",
-         "snap/post boyfriend photo/crush",
-         "tell me your boyfriend type!",
-         "say *i hv crush on you, do you want to be my girlfriend?* to the opposite sex, the last time you chatted (submit on wa/tele), wait for him to reply, if you have, drop here",
-         "record ur voice that read *titar ke age do titar, titar ke piche do titar*",
-         "prank chat ex and say *i love u, please come back.* without saying dare!",
-         "chat to contact wa in the order according to your battery %, then tell him *i am lucky to hv you!*",
-         "change the name to *I am a child of randi* for 5 hours",
-         "type in bengali 24 hours",
-         "Use selmon bhoi photo for 3 days",
-         "drop a song quote then tag a suitable member for that quote",
-         "send voice note saying can i call u baby?",
-         "ss recent call whatsapp",
-         "Say *YOU ARE SO BEAUTIFUL DON'T LIE* to guys!",
-         "pop to a group member, and say fuck you",
-         "Act like a chicken in front of ur parents",
-         "Pick up a random book and read one page out loud in vn n send it here",
-         "Open your front door and howl like a wolf for 10 seconds",
-         "Take an embarrassing selfie and paste it on your profile picture",
-         "Let the group choose a word and a well known song. You have to sing that song and send it in voice note",
-         "Walk on your elbows and knees for as long as you can",
-         "sing national anthem in voice note",
-         "Breakdance for 30 seconds in the sitting room😂",
-         "Tell the saddest story you know",
-         "make a twerk dance video and put it on status for 5mins",
-         "Eat a raw piece of garlic",
-         "Show the last five people you texted and what the messages said",
-         "put your full name on status for 5hrs",
-         "make a short dance video without any filter just with a music and put it on ur status for 5hrs",
-         "call ur bestie, bitch",
-         "put your photo without filter on ur status for 10mins",
-         "say i love oli london in voice note🤣🤣",
-         "Send a message to your ex and say I still like you",
-         "call Crush/girlfriend/bestie now and screenshot here",
-         "pop to one of the group member personal chat and Say you ugly bustard",
-         "say YOU ARE BEAUTIFUL/HANDSOME to one of person who is in top of ur pinlist or the first person on ur chatlist",
-         "send voice notes and say, can i call u baby, if u r boy tag girl/if girl tag boy",
-         "write i love you (random grup member name, who is online) in personal chat, (if u r boy write girl name/if girl write boy name) take a snap of the pic and send it here",
-         "use any bollywood actor photo as ur pfp for 3 days",
-         "put your crush photo on status with caption, this is my crush",
-         "change name to I AM GAY for 5 hours",
-         "chat to any contact in whatsapp and say i will be ur bf/gf for 5hours",
-         "send voice note says i hv crush on you, want to be my girlfriend/boyfriend or not? to any random person from the grup(if u girl choose boy, if boy choose girl",
-         "slap ur butt hardly send the sound of slap through voice note😂",
-         "state ur gf/bf type and send the photo here with caption, ugliest girl/boy in the world",
-         "shout bravooooooooo and send here through voice note",
-         "snap your face then send it here",
-         "Send your photo with a caption, i am lesbian",
-         "shout using harsh words and send it here through vn",
-         "shout you bastard in front of your mom/papa",
-         "change the name to i am idiot for 24 hours",
-         "slap urself firmly and send the sound of slap through voice note😂",
-         "say i love the bot owner Fantox through voice note",
-         "send your gf/bf pic here",
-         "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
-         "breakup with your best friend for 5hrs without telling him/her that its a dare",
-          "tell one of your frnd that u love him/her and wanna marry him/her, without telling him/her that its a dare",
-          "say i love depak kalal through voice note",
-          "write i am feeling horny and put it on status, u can delete it only after 5hrs",
-          "write i am lesbian and put it on status, u can delete only after 5hrs",
-          "kiss your mommy or papa and say i love you😌",
-          "put your father name on status for 5hrs",
-          "send abusive words in any grup, excepting this grup, and send screenshot proof here"
+                   const tantangan =[
+         "Minum kencing sendiri",
+         "Topup in admin",
+         "Saling sepong dengan mamat",
+         "Sentil titit admin.",
+         "Ajak Adu batang dengan member lain",
+         "Telpon mantanlu trus bilang Kangen Kedia",
+         "Nyanyi keun lagu terakhir yang elu dengerin",
+         "Kirim VN ke mantan/Doi/Cewek lu , Terus bilang 'Halo aku (Sebut namalu) , Mau nelpon sebentar , aku kangen🥺👉🏼👈🏼",
+         "Entot Mamat",
+         "Ajak orang random untuk coli bareng",
+         "Sebutkeun nama mantan lo!",
+         "Ajak 1anggota untuk Saling sepong!",
+         "Kirim foto waifu lo!",
+         "Chat 1member disini .trus kirim foto titid lu kedia, abis itu SS kirimin kesini!",
+         "Buka salah 1 aib lo!",
+         "tag orang yang pengen lu entot",
+         "Udah pernah ngentot?.",
+         "Ubah namalu jadi PENGIKUT MAMAT PEDO",
+         "Teriak KONTOL di Voice Note",
+         "Jilat titid sendiri",
+         "katain waifu lu lonte!",
+         "Ngocog ditempat umum",
+         "Teriak PENGEN NGENTOT divoice note*",
+         "Kirim foto telanjang waifu lo",
+         "Sedekah kekotak amal terdekat*",
+         "Ubah namalu jadi PENIKMAT 2D",
+         "Entot bantal sendiri",
+         "Katain waifu orang LONTE",
+         "Katakan MARK KONTOL",
+         "Katakan MARK KONTOL",
+         "SS History bokeplu ",
+         "Sebutkeun Fetishmu!",
+	 "jikalau kamu dipaksa untuk meng NTR antara istri pahlawan dan raja, mana yg kamu pilih?",
+         "Katakan MAMAT PEDO"
      ]
                    const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
                    buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
-                   Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
+                   Miku.sendMessage(from, { image: buffer, caption: '*Inilah Tantanganmu!!!*\n\n'+ Mikudareww }, {quoted:m})
                    break
                        
 
@@ -3996,7 +3949,7 @@ case 'hentaivid': case 'hentaivideo': {
 reply(mess.waiting)
 anu = await hentai()
 result912 = anu[Math.floor(Math.random(), anu.length)]
-Miku.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Title : ${result912.title}\nCategory : ${result912.category}\n$Mimetype : ${result912.type}\nViews : ${result912.views_count}\nShares : ${result912.share_count}\nSource : ${result912.link}\nMedia Url : ${result912.video_1}` }, { quoted: m })
+Miku.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Judul : ${result912.title}\nKategori : ${result912.category}\n$Mimetype : ${result912.type}\nViews : ${result912.views_count}\nShares : ${result912.share_count}\nSource : ${result912.link}\nMedia Url : ${result912.video_1}` }, { quoted: m })
 }
 break
 
@@ -4008,11 +3961,11 @@ case 'trap' :
 reply(mess.waiting)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
  let trapbot = [
-    {buttonId: `-trap`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `-trap`, buttonText: {displayText: `Yang lain`}, type: 1},
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `Ini dia...`,
   buttons: trapbot,
   headerType: 1
   }     
@@ -4030,11 +3983,11 @@ case 'hneko' :
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
  let hnekobot = [
-    {buttonId: `-${command}`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `-${command}`, buttonText: {displayText: `Yang lain`}, type: 1},
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Nyaah...`,
+   caption:  `Miow-Miow Nii-chan...`,
   buttons: hnekobot,
   headerType: 1
   }      
@@ -4056,7 +4009,7 @@ reply(mess.waiting)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `Jangan coli pake gambar bang!...`,
   buttons: nwaifubot,
   headerType: 1
   }      
@@ -4140,7 +4093,7 @@ reply(mess.waiting)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `Inilah dia...`,
   buttons: xxhnekobot,
   headerType: 1
   }      
@@ -4515,7 +4468,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `Here it is...`,
+       caption:  `Exoplusionnnn...`,
       footer: `${global.BotName}`,
           buttons: wbutsss,
      headerType: 4
@@ -4581,43 +4534,43 @@ case 'anime':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-	    if(!q) return reply(`Please proide a search term!\n\n*Example:* ${prefix}anime naruto`)
+	    if(!q) return reply(`Tolong ketik judul animenya!\n\n*Contoh:* ${prefix}anime naruto`)
 reply(mess.waiting)							
 const { Anime } =require("@shineiichijo/marika")
     const client = new Anime();
      let anime = await client.searchAnime(q)
     let result = anime.data[0];
     console.log(result)
-   let details = `*Title:* ${result.title}\n`;
+   let details = `*Judul :* ${result.title}\n`;
     details += `*Format:* ${result.type}\n`;
     details += `*Status:* ${result.status.toUpperCase().replace(/\_/g, " ")}\n`;
-    details += `*Total episodes:* ${result.episodes}\n`;
-    details += `*Duration:* ${result.duration}\n`;
-    details += `*Genres:*\n`;
+    details += `*Total episode:* ${result.episodes}\n`;
+    details += `*Durasi:* ${result.duration}\n`;
+    details += `*Genre:*\n`;
     for (let i = 0; i < result.genres.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.genres[i].name}\n`;
     }
-    details += `*Based on:* ${result.source.toUpperCase()}\n`;
-    details += `*Studios:*\n`;
+    details += `*Berdasarkan:* ${result.source.toUpperCase()}\n`;
+    details += `*Studio:*\n`;
     for (let i = 0; i < result.studios.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.studios[i].name}\n`;
     }
-    details += `*Producers:*\n`;
+    details += `*Producer:*\n`;
     for (let i = 0; i < result.producers.length; i++) {
       details += `\t\t\t\t\t\t\t\t\t\t${result.producers[i].name}\n`;
     }
-    details += `*Premiered on:* ${result.aired.from}\n`;
-    details += `*Ended on:* ${result.aired.to}\n`;
-    details += `*Popularity:* ${result.popularity}\n`;
-    details += `*Favorites:* ${result.favorites}\n`;
+    details += `*Tayang perdana:* ${result.aired.from}\n`;
+    details += `*Berakhir pada:* ${result.aired.to}\n`;
+    details += `*Popularitas:* ${result.popularity}\n`;
+    details += `*Favorite:* ${result.favorites}\n`;
     details += `*Rating:* ${result.rating}\n`;
-    details += `*Rank:* ${result.rank}\n\n`;
+    details += `*Peringkat:* ${result.rank}\n\n`;
     if (result.trailer.url !== null)
       details += `*Trailer:* ${result.trailer.url}\n\n`;
     details += `*URL:* ${result.url}\n\n`;
     if (result.background !== null)
       details += `*Background:* ${result.background}\n\n`;
-    details += `*Description:* ${result.synopsis.replace(
+    details += `*Deskripsi:* ${result.synopsis.replace(
       /\[Written by MAL Rewrite]/g,
       ""
     )}`
@@ -4631,20 +4584,20 @@ case 'manga':
 reply(mess.waiting)							
 const { Manga } =require("@shineiichijo/marika")
 const manga = new Manga();
-if(!q) return reply(`Please proide a search term!\n\n_Example:_ ${prefix}manga naruto`)
+if(!q) return reply(`Tolong masukkan judulnya!\n\n_Contoh:_ ${prefix}manga naruto`)
 let srh = await manga.searchManga(q)
-    let mang = `*Title:* ${srh.data[0].title}\n`;
+    let mang = `*Judul:* ${srh.data[0].title}\n`;
     mang += `*Status:* ${srh.data[0].status}\n`;
-    mang += `*Total Volumes:* ${srh.data[0].volumes}\n`;
-    mang += `*Total Chapters:* ${srh.data[0].chapters}\n`;
-    mang += `*Genres:*\n`;
+    mang += `*Total Volume:* ${srh.data[0].volumes}\n`;
+    mang += `*Total Chapter:* ${srh.data[0].chapters}\n`;
+    mang += `*Genre:*\n`;
     for (let i = 0; i < srh.data[0].genres.length; i++) {
       mang += `\t\t\t\t\t\t\t\t${srh.data[0].genres[i].name}\n`;
     }
-    mang += `*Published on:* ${srh.data[0].published.from}\n`;
-    mang += `*Score:* ${srh.data[0].scored}\n`;
-    mang += `*Popularity:* ${srh.data[0].popularity}\n`;
-    mang += `*Favorites:* ${srh.data[0].favorites}\n`;
+    mang += `*Diterbitkan pada:* ${srh.data[0].published.from}\n`;
+    mang += `*Skor:* ${srh.data[0].scored}\n`;
+    mang += `*Popularitas:* ${srh.data[0].popularity}\n`;
+    mang += `*Favorite:* ${srh.data[0].favorites}\n`;
     mang += `*Authors:*\n`;
     for (let i = 0; i < srh.data[0].authors.length; i++) {
       mang += `\t\t\t\t\t\t\t\t\t${srh.data[0].authors[i].name} (${srh.data[0].authors[0].type})\n`;
@@ -4652,7 +4605,7 @@ let srh = await manga.searchManga(q)
     mang += `\n*URL:* ${srh.data[0].url}\n\n`;
     if (srh.data[0].background !== null)
       mang += `*Background:* ${srh.data[0].background}`;
-    mang += `*Description:* ${srh.data[0].synopsis.replace(
+    mang += `*Deskripsin:* ${srh.data[0].synopsis.replace(
       /\[Written by MAL Rewrite]/g,
       ""
     )}`;
@@ -4668,11 +4621,11 @@ case 'waifu' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
  var wbuttsssr = [
-    {buttonId: `-waifu`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `-waifu`, buttonText: {displayText: `Lanjut cari waipu?`}, type: 1},
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: 'More than one waifu will definitely ruin your Laifu!',
+        caption: 'Waifu kok musiman!',
         buttons: wbuttsssr,
         headerType: 4
          }     
@@ -4693,7 +4646,7 @@ reply(mess.waiting)
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
-        caption: 'Nyaa...',
+        caption: 'Miow Miow...',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -4812,11 +4765,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+Saya *Miku Nakano*, Sebuah Bot yang dibuat oleh Lord Fantox dan di edit oleh Ri *.
 
-🔰 My prefix is:  ${prefix}
+🔰 Perintahku adalah:  ${prefix}
 
-Here's the list of my Commands.
+Ini list perintahnya.
 
 
  
@@ -4876,28 +4829,28 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
 qr, say, translate, fliptext, toletter
 
- *━━━〈  💥 NSFW 💥  〉━━━*
+ *━━━〈  💥 BOKEP 💥  〉━━━*
 
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
+🍁 Ketik " *${prefix}nsfw* " Terus aktifin (Hanya admin yang bisa!) 
 
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+🍁 Terus ketik " *${prefix}nsfwmenu* " untuk melihat semua list perintah BOKEP.
 
 
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *Fantox* Modded By: *Ri*
 
- 🔰 To use any of these commands type 
+ 🔰 Untuk menggunakan salah satu perintah ketik: 
  " *${prefix}<Command name>* ".
  
  🔰 To get Support Group link type " *${prefix}support* ".
 
- 🔰 Type " *${prefix}help* " to get full command list.`
+ 🔰 Ketik " *${prefix}help* " Untuk melihat semua list perintah.`
     
 
  let buttonshelpm = [
-    {buttonId: `-owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `-owner`, buttonText: {displayText: 'Pemilik Bot'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
@@ -4942,7 +4895,7 @@ case 'miku':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Miku? Then we are the same.`
+const txt = `Kamu Suka miku ? sama saya juga!.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -4989,8 +4942,8 @@ case 'add':{
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
- if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
-  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+ if (users.length == 0) return replay(`Tolong ketik nomor orang yang ingin ditambahkan`)
+  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`Orang tersebut telah ditambahkan!`)).catch((err) => replay(`Gabisa nambahin orang tersebut ke group ini!`))
  }
  break
 
@@ -4999,7 +4952,7 @@ case 'add':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+    if (!args[0]) return reply("Tolong beri aku textnya biar aku bisa ngomong!")
       
       let texttosay = text
         ? text
