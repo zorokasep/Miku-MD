@@ -151,7 +151,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 mikutext = `
 Hallo bang! @${WAuserName.split("@")[0]},
 
-Saya *Miku Nakano*, Harap baca deskripsi group terlebih dahulu! Selamat Datang Di  ${metadata.subject}.
+Saya *Miku Nakano*, Harap baca *Deskripsi Grup* terlebih dahulu ya! Selamat Datang Di * ${metadata.subject} *.
 
 *Deskripsi Grup:*
 ${metadata.desc}
@@ -171,7 +171,7 @@ Miku.sendMessage(anu.id, buttonMessage)
 Selamat Tinggal! 👋, @${WAuserName.split("@")[0]},
 
 Semoga tenang dialam sana. 
-woy *Admin* tolol , kalo dia masuk lagi banned aja langsung!
+Woy *Admin* tolol , kalo dia masuk lagi *BANNED* aja langsung!
 `
 
     let buttonMessage = {
