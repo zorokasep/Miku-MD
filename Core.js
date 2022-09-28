@@ -1242,8 +1242,8 @@ const ftroli = {
   },
   message: { 
   "videoMessage": { 
-  "title": `${private.BotName}`,
-  "h": `${private.OwnerName}`,
+  "title": `${global.BotName}`,
+  "h": `${global.OwnerName}`,
   'seconds': '30', 
   'caption': `${global.WaterMark}`,
   'jpegThumbnail': BotLogo
@@ -1260,9 +1260,9 @@ const ftroli = {
   "message": {
   "groupInviteMessage": {
   "groupJid": "916909137213-1616169743@g.us",
-  "inviteCode": `${private.OwnerName}`,
-  "groupName": `${private.BotName}`, 
-  "caption":`${private.WaterMark}`, 
+  "inviteCode": `${global.OwnerName}`,
+  "groupName": `${global.BotName}`, 
+  "caption":`${global.WaterMark}`, 
   'jpegThumbnail': BotLogo
   }
   }
