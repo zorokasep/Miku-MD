@@ -1517,7 +1517,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 Hentai MENU 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -3759,7 +3759,7 @@ case 'charactercheck':
          "Entot bantal sendiri",
          "Katain waifu orang LONTE",
          "Katakan MARK KONTOL",
-         "Katakan MARK KONTOL",
+         "mengajak nikah sepupu didepan keluarga besar",
          "SS History bokeplu ",
          "Sebutkeun Fetishmu!",
 	 "jikalau kamu dipaksa untuk meng NTR antara istri pahlawan dan raja, mana yg kamu pilih?",
@@ -3775,7 +3775,7 @@ case 'truth':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                            const truth =[
-                 "Have you ever liked anyone? How long?",
+                 "pernahkah coli dengan gambar keluarga sendiri?",
                  "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
                  "apa ketakutan terbesar kamu?",
                  "Have you ever liked someone and felt that person likes you too?",
@@ -4542,7 +4542,7 @@ const { Anime } =require("@shineiichijo/marika")
     let result = anime.data[0];
     console.log(result)
    let details = `*Judul :* ${result.title}\n`;
-    details += `*Format:* ${result.type}\n`;
+    details += `*Tipe:* ${result.type}\n`;
     details += `*Status:* ${result.status.toUpperCase().replace(/\_/g, " ")}\n`;
     details += `*Total episode:* ${result.episodes}\n`;
     details += `*Durasi:* ${result.duration}\n`;
@@ -4664,11 +4664,11 @@ case 'loli' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `-loli`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `-loli`, buttonText: {displayText: `Lanjut mhank`}, type: 1},
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
-        caption: 'Dont be a lolicon !',
+        caption: 'Jangan Jadi pedo kek mamat ya !',
         buttons: wbuttsssr,
         headerType: 2
          }     
