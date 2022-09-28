@@ -1330,7 +1330,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Fantox to take your WhatsApp usage into next level.
+    Hello ${pushname} dear 👋. I am ${private.BotName}, a bot developed by: Fantox to take your WhatsApp usage into next level.
         
        「 System Info 」
     
