@@ -7,13 +7,13 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918101187835']
-global.OwnerNumber = ['918101187835']
-global.ownertag = ['918101187835']
+global.Owner = ['6281271139724']
+global.OwnerNumber = ['6281271139724']
+global.ownertag = ['6281271139724']
 global.BotName = "Miku"
 global.packname = "Miku bot"
 global.author = "By: Fantox"
-global.OwnerName = "Fantox"
+global.OwnerName = "Ri"
 global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
 global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
 global.sessionName = "session"
@@ -70,7 +70,7 @@ global.mess = {
     error: 'Bot Eror, sama kek otaklu!',
     banned: 'Kau Sudah dibanned untuk menggunakan perintah itu, MAMAM!',
     bangc: 'This Group is *Banned* from using Commands!',
-    nonsfw: 'Otak Bokep. NSFW modenya belom diaktifin njeng!!'
+    nonsfw: 'Otak Bokep. NSFW modenya belom diaktifin njeng. Suruh admin ketik -NSFW ON!!'
     
 }
 
