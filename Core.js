@@ -4993,7 +4993,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`Tidak ada perintah seperti itu *${pushname}* senpai! Ketik *${prefix}help* untuk melihat semua perintah!`)
 
     }	 			
 
