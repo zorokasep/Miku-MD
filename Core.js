@@ -691,8 +691,8 @@ let afkTime = user.afkTime
 if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 reply(`
-Pls try not to tag him!
-He's in away from keyboard ${reason ? 'with reason ' + reason : 'no reason'}
+Tolong jangan Ngetag Beliau!
+Beliau lagi AFK ${reason ? 'Dengan alasan ' + reason : 'no reason'}
 During ${clockString(new Date - afkTime)}
 `.trim())
 }
@@ -700,8 +700,7 @@ During ${clockString(new Date - afkTime)}
 if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
-Pls try not to tag him!
-He's Offline ${user.afkReason ? ' after ' + user.afkReason : ''}
+Beliau telah online ${user.afkReason ? ' Setelah ' + user.afkReason : ''}
 During ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
