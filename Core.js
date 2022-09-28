@@ -3371,29 +3371,35 @@ reply("Error link!")
 }
 break
 
-case 'play':
-  if (!text) return `Example : ${prefix + command} story wa anime`
-  let yts = require("yt-search")
-  let search = await yts(text)
-  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-  let buttons = [{buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Audio 🎵'}, type: 1}, {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: 'Video 🎦'}, type: 1}]
-  let buttonMessage = {
-  image: { url: anu.thumbnail },
-  caption: `*----- DATA DITEMUKAN -----*
-  
-*📄 Title :* ${anu.title}
-*⌚ Duration :* ${anu.timestamp}
-*👁️ Viewers :* ${anu.views}
-*📤 Upload :* ${anu.ago}
-*👨‍🎤 Channel :* ${anu.author.url}
-*🔗 Url :* ${anu.url}`,
-  footer: global.ownerName,
-  buttons: buttons,
-  headerType: 4
-  }
-  ichi.sendMessage(m.chat, buttonMessage, { quoted: m })
-  break
+case 'music': case 'play': case 'song': case 'ytplay': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ let yts = require("yt-search")
+ let search = await yts(text)
+ let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+ let ytvc = await hx.youtube(anu.url)
+ let buttons = [
+ {buttonId: `-ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
+ {buttonId: `-ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+ ]
+ let buttonMessage = {
+ image: { url: anu.thumbnail },
+ caption: `「  _Miku Youtube Player_  」
+*Title :* ${anu.title}
+*Duration :* ${anu.timestamp}
+*Viewers :* ${anu.views}
+*Uploaded :* ${anu.ago}
+*Channel :* ${anu.author.name}
+*Url :* ${anu.url}`,
+ footer: `${global.BotName}`,
+ buttons: buttons,
+ headerType: 4,
 
+ }
+ Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
+ }
+ break
+		
  case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
