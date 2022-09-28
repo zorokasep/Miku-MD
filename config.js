@@ -11,8 +11,8 @@ global.Owner = ['6281271139724']
 global.OwnerNumber = ['6281271139724']
 global.ownertag = ['6281271139724']
 global.BotName = "Miku"
-global.packname = "Miku bot"
-global.author = "By: Fantox"
+global.packname = "BPM Official"
+global.author = "Miuna Bot"
 global.OwnerName = "Ri"
 global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
 global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
@@ -59,13 +59,13 @@ global.ntilink = []
 
 global.mess = {
     jobdone: 'Tugas Selesai!',
-    useradmin: 'Cuma admin yang bisa ngelakuin itu *Baka*!',
+    useradmin: 'Cuma admin yang bisa ngelakuin itu *Blokk*!',
     botadmin: 'Gw gabisa ngelakuin itu klo belom jadi admin!.',
     botowner: 'Cuma tuanku Ri yang bisa menggunakan perintah itu!',
     grouponly: 'Perintah itu hanya bisa digunakan didalam group tot!',
     privateonly: 'Perintah ini hanya bisa digunakan di chat pribadi njeng!',
     botonly: 'Cuma bot yang bisa gunain perintah itu',
-    waiting: 'Sabar Njeng...',
+    waiting: 'Sabar bang...',
     nolink: 'Taro linknya tot!',
     error: 'Bot Eror, sama kek otaklu!',
     banned: 'Kau Sudah dibanned untuk menggunakan perintah itu, MAMAM!',
