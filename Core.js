@@ -3726,10 +3726,10 @@ case 'charactercheck':
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
                    
- case 'tantangan':
+ case 'dare':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-                   const tantangan =[
+                   const dare =[
          "Minum kencing sendiri",
          "Topup in admin",
          "Saling sepong dengan mamat",
