@@ -58,19 +58,19 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'Job done...',
-    useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
-    botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-    botowner: 'Only my *Owner* can use this command, Baka!',
-    grouponly: 'This command is only made for *Groups*, Baka!',
-    privateonly: 'This command is only made for *Private Chat*, Baka!',
-    botonly: 'Only the *Bot itself* can use this command!',
-    waiting: 'Chotto Matte...',
-    nolink: 'Please provide me *link*, Baka!',
-    error: 'An error occurd!',
-    banned: 'You are *Banned* fron using commands!',
+    jobdone: 'Tugas Selesai!',
+    useradmin: 'Cuma admin yang bisa ngelakuin itu *Baka*!',
+    botadmin: 'Gw gabisa ngelakuin itu klo belom jadi admin!.',
+    botowner: 'Cuma tuanku Ri yang bisa menggunakan perintah itu!',
+    grouponly: 'Perintah itu hanya bisa digunakan didalam group tot!',
+    privateonly: 'Perintah ini hanya bisa digunakan di chat pribadi njeng!',
+    botonly: 'Cuma bot yang bisa gunain perintah itu',
+    waiting: 'Sabar Njeng...',
+    nolink: 'Taro linknya tot!',
+    error: 'Bot Eror, sama kek otaklu!',
+    banned: 'Kau Sudah dibanned untuk menggunakan perintah itu, MAMAM!',
     bangc: 'This Group is *Banned* from using Commands!',
-    nonsfw: 'Dont be a pervert Baka! This is not a NSFW enabled group!'
+    nonsfw: 'Otak Bokep. NSFW modenya belom diaktifin njeng!!'
     
 }
 
