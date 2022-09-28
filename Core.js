@@ -4810,9 +4810,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = `Hello *${pushname}* bro,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+I am *Yumeko*, a bot developed by *Smokey*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4886,7 +4886,7 @@ qr, say, translate, fliptext, toletter
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *Smokey*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
