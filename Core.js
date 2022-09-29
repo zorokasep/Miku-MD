@@ -2250,8 +2250,8 @@ await Miku.sendMessage(m.chat, { delete: key })
  replay('Mode bokep sudah dimatikan!')
  } else {
    let buttonsntnsfw = [
-   { buttonId: `-on`, buttonText: { displayText: 'Aktifin' }, type: 1 },
-   { buttonId: `-off`, buttonText: { displayText: 'Matiin' }, type: 1 }
+   { buttonId: `-nsfw on`, buttonText: { displayText: 'Aktifin' }, type: 1 },
+   { buttonId: `-nsfw off`, buttonText: { displayText: 'Matiin' }, type: 1 }
    ]
    await Miku.sendButtonText(m.chat, buttonsntnsfw, `Silahkeun Klik tombol ini\n\nKetahuan nyari bokep loli = FBI datang kerumah`, `${global.BotName}`, m)
    }
