@@ -691,9 +691,9 @@ let afkTime = user.afkTime
 if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 reply(`
-Tolong jangan Ngetag Beliau!
+Tolong jangan tag Beliau!
 Beliau lagi AFK ${reason ? 'Dengan alasan ' + reason : 'no reason'}
-During ${clockString(new Date - afkTime)}
+Selama ${clockString(new Date - afkTime)}
 `.trim())
 }
 
@@ -701,7 +701,7 @@ if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
 Beliau telah online ${user.afkReason ? ' Setelah ' + user.afkReason : ''}
-During ${clockString(new Date - user.afkTime)}
+Selama ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
 user.afkReason = ''
@@ -1484,13 +1484,10 @@ if (isBanChat) return reply(mess.banChat)
 reply(` Don't forget to join yeah!
 
 *GROUP 1*
-https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS
+https://chat.whatsapp.com/CLwGABzGLrn13nOmpZKysc
 
 *GROUP 2*
-https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5
-
-*GROUP 3*
-https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd`)
+https://chat.whatsapp.com/HcKfSq5s7Mx78C33r4RxkT`)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -2245,7 +2242,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(Intinya bokep) Fitur itu telah diaktifkan, yang berarti semua member bisa akses gambar bokep kartun!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`「 *PERHATIAN!* 」\`\`\`\n\nNSFW(Intinya bokep) Fitur Ini telah diaktifkan, Sekarang semua member bisa akses gambar bokep kartun!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!AntiNsfw) return replay('Already deactivated')
  let off = ntnsfw.indexOf(from)
@@ -2253,10 +2250,10 @@ await Miku.sendMessage(m.chat, { delete: key })
  replay('Mode bokep sudah dimatikan!')
  } else {
    let buttonsntnsfw = [
-   { buttonId: `-Bokep on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `-Bokep off`, buttonText: { displayText: 'Off' }, type: 1 }
+   { buttonId: `-on`, buttonText: { displayText: 'Aktifin' }, type: 1 },
+   { buttonId: `-off`, buttonText: { displayText: 'Matiin' }, type: 1 }
    ]
-   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Silahkeun Klik tombol ini\n\nOn Ini untuk aktifin\nIni untuk matiin`, `${global.BotName}`, m)
+   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Silahkeun Klik tombol ini\n\nKetahuan nyari bokep loli = FBI datang kerumah`, `${global.BotName}`, m)
    }
    }
    break
@@ -4763,23 +4760,23 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-Saya *Miku Nakano*, Sebuah Bot yang dibuat oleh Lord Fantox dan di edit oleh Ri *.
+Saya *Miku Nakano*, Sebuah Bot yang dibuat oleh *Lord Fantox* dan di edit oleh *Ri* (ya edit bahasa doang :v).
 
-🔰 Perintahku adalah:  ${prefix}
+🔰 Awalan Perintahku adalah:  *${prefix}*
 
 Ini list perintahnya.
 
 
  
- *━━━〈  🎆 Core 🎆  〉━━━*
+ *━━━〈  🎆 Inti 🎆  〉━━━*
 
 speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
- *━━━〈  🎀 Owner 🎀  〉━━━*
+ *━━━〈  🎀 Pemilik 🎀  〉━━━*
 
 self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
 
- *━━━〈  ⭕ Group ⭕  〉━━━*
+ *━━━〈  ⭕ Grup ⭕  〉━━━*
  
 promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
 
@@ -4787,7 +4784,7 @@ promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, 
  
 antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
 
- *━━━〈  🔍 Search 🔍  〉━━━*
+ *━━━〈  🔍 Kang Cari 🔍  〉━━━*
 
 play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
 
@@ -4799,15 +4796,15 @@ sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toa
 
 bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
 
- *━━━〈  📍 Reactions 📍  〉━━━*
+ *━━━〈  📍 Reaksi 📍  〉━━━*
 
 bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
 
- *━━━〈  🌌 Downloader 🌌  〉━━━*
+ *━━━〈  🌌 Kang Download 🌌  〉━━━*
 
 play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
 
- *━━━〈  🈴 Weeb 🈴  〉━━━*
+ *━━━〈  🈴 Wibu bau bawang 🈴  〉━━━*
 
 crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
 
@@ -4815,11 +4812,11 @@ crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpa
 
 animequote, quote, covid, earthquake, wiki
 
- *━━━〈  🎗 Others 🎗  〉━━━*
+ *━━━〈  🎗 Lainnya 🎗  〉━━━*
 
 stickermeme, quotes, darkjoke 
 
- *━━━〈  🎐 Fun 🎐  〉━━━*
+ *━━━〈  🎐 Gabut 🎐  〉━━━*
 
 reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
 
@@ -4829,9 +4826,9 @@ qr, say, translate, fliptext, toletter
 
  *━━━〈  💥 BOKEP 💥  〉━━━*
 
-🍁 Ketik " *${prefix}nsfw* " Terus aktifin (Hanya admin yang bisa!) 
+🍁 (*ADMIN*) Ketik " *${prefix}nsfw* " Terus aktifin 
 
-🍁 Terus ketik " *${prefix}nsfwmenu* " untuk melihat semua list perintah BOKEP.
+🍁 Terus ketik " *${prefix}nsfwmenu* " untuk melihat semua perintah BOKEP.
 
 
 
@@ -4840,9 +4837,9 @@ qr, say, translate, fliptext, toletter
  Powered by: *Fantox* Modded By: *Ri*
 
  🔰 Untuk menggunakan salah satu perintah ketik: 
- " *${prefix}<Command name>* ".
+ " *${prefix}<Nama Perintah>* ".
  
- 🔰 To get Support Group link type " *${prefix}support* ".
+ 🔰 Jangan terlalu spam bot , karna itu bisa menggangu member lain!
 
  🔰 Ketik " *${prefix}help* " Untuk melihat semua list perintah.`
     
