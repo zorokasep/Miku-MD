@@ -1481,13 +1481,13 @@ case 'botgrup':
 case 'botgroup':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply(` Don't forget to join yeah!
+reply(` Jangan lupa join yak!
 
 *GROUP 1*
-https://chat.whatsapp.com/CLwGABzGLrn13nOmpZKysc
+https://chat.whatsapp.com/CLwGABzGLrn13nOmpZKysc *BPM Update*
 
 *GROUP 2*
-https://chat.whatsapp.com/HcKfSq5s7Mx78C33r4RxkT`)
+https://chat.whatsapp.com/HcKfSq5s7Mx78C33r4RxkT *Diskusi Apa Sadja*`)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -2233,7 +2233,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiNsfw) return replay('Already activated')
+ if (AntiNsfw) return replay('Udah dihidupin bang')
  ntnsfw.push(from)
  replay('Mode Bokep telah diaktifkan!')
  var groupe = await Miku.groupMetadata(from)
@@ -2244,7 +2244,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  })
  Miku.sendMessage(from, {text: `\`\`\`「 *PERHATIAN!* 」\`\`\`\n\nNSFW(Intinya bokep) Fitur Ini telah diaktifkan, Sekarang semua member bisa akses gambar bokep kartun!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiNsfw) return replay('Already deactivated')
+ if (!AntiNsfw) return replay('Udah dimatiin bang')
  let off = ntnsfw.indexOf(from)
  ntnsfw.splice(off, 1)
  replay('Mode bokep sudah dimatikan!')
