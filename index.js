@@ -131,13 +131,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
             for (let num of participants) {
   
                 try {
-                    ppuser = await Miku.profilePictureUrl(num,)
+                    ppuser = await Miku.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://wallpapercave.com/wp/wp10753770.jpg'
                 }
 
                 try {
-                    ppgroup = await Miku.profilePictureUrl(num,)
+                    ppgroup = await Miku.profilePictureUrl(anu.id, 'image')
                 } catch {
                     ppgroup = 'https://telegra.ph/file/4cc2712eee93c105f6739.jpg'
                 }
@@ -158,7 +158,6 @@ ${metadata.desc}
 `
 
     let buttonMessage = {
-    image: await getBuffer(num,),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
@@ -175,7 +174,6 @@ Semoga *Colimu* tidak nickmat lagi.
 `
 
     let buttonMessage = {
-    image:await getBuffer(num,),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
