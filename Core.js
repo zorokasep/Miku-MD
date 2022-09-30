@@ -4826,7 +4826,7 @@ speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, s
  
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
+self, public, ban, bangroup, Nikaloyumeko, join, Nikaloyumeko, block, unblock, broadcast 
 
  *━━━〈  ⭕ Group ⭕  〉━━━*
  
@@ -4842,7 +4842,7 @@ play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, sea
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
+sticker, toimg, tovideo, togif , stickermeme, emojimix, tourl, tomp3, toaudio
 
  *━━━〈  🔉 Audio 🔉  〉━━━*
 
