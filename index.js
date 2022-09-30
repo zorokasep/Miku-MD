@@ -158,7 +158,7 @@ ${metadata.desc}
 `
 
     let buttonMessage = {
-    image: await getBuffer(ppgroup),
+    image: await getBuffer(),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
@@ -175,7 +175,7 @@ Semoga *Colimu* tidak nickmat lagi.
 `
 
     let buttonMessage = {
-    image:await getBuffer(ppuser),
+    image:await getBuffer(),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
