@@ -1404,9 +1404,9 @@ switch(command) {
     case 'wangy':
     if (isBan) return reply(mess.ban)	 			
     if (isBanChat) return reply(mess.banChat)
-                 if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
+                 if (!text) return replay(`Gunakan nama karakternya! \nContoh : *${prefix + command} Keqing*`)
                  qq = q.toUpperCase()
-                 awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaah the smell of hair ${qq} smelly i want to smell the fragrance ${qq} AAAAAAAAH ~ Her hair.... aaah i want to stroke her hair too ~~ AAAAAH ${qq} first time out in anime is cute too ❤️ ❤️ ❤️ so AAAAAAAH ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️what ? ${qq} it's not real ? Just HELL you say ? no, no no no no no no no no no no no no no no no !! I DON'T CARE ABOUT THE REALITY, I DON'T CARE. ❤️ ❤️ ❤️ ${qq} me ... ${qq} on the laptop watching me, ${qq} .. you believe in me ? aaaaaaaaaaah thanks ${q} I don't want to give up ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH I STILL HAVE ${qq} ALSO NOT THE SAME AAAAAAAAAAAAAAH`
+                 awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, AHHHHHH BAUNYA ${qq} WANGY SEKALIIII COYYY,  AKU MAU NYIUMIN AROMA WANGY NYAAA. ${qq} AAAAAAAAH ~ RAMBUTNYA.... AHHH RAMBUTNYA JUGA PENGEN AKU ELUS ELUS SAMBIL AKU ENTOT BRUTAL ~~ AAAAAH MEMEK ${qq} PASTI SANGAT PINK DAN TENTU SAYA *WANGY* BANGET ❤️ ❤️ ❤️ AAAAAAAH ${qq} AAAAAA CANTIK BANGET ANJENG!............ ${qq} AAAAAAAAAAAAAAAAAAAAGH GATAHAN PENGEN CROTTTTT!! ❤️ ❤️ ❤️Apaan ?  ? ${qq} Engga nyata ? Lu Iri ? BILANG BOSS, SERLOK BRO! ? APA APA APA ? STRESS ? AKU GAPEDULI ANJENG!. ❤️ ❤️ ❤️ ${qq}KU ... ${qq} Selalu memperhatikanku ketika aku coli pake gambarnya. Apa ${qq} ?, Kamu mau ngentot sama aku ?  aaaaaaaaaaah GASKEN ATUH! . ${qq} Mau berapa ronde ? Sampe pagi pun aku gas. ${qq} AHHHH , SLURRPP SLURRPP. Syuurrrr. Kamu Keluar ${qq} . tahan sebentar aku juga mau keluar.  ❤️ ❤️ ❤️  ${qq} AKU AKAN CROOTT SEBANYAK 1TON BIAR BISA MENGISI RAHIMMU. CROTTTT 💦💦💦💦💦💦 AHHH~`
                  reply(awikwok)
                  break
 
@@ -2791,11 +2791,11 @@ let mentioned = participants.map(v => v.jid)
             }
             break
 
-case 'when':
+case 'Kapan':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
-					const kapan = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow',`After This Command, You Too ${q}`]
+				if (!text) return replay(`Tambahin Textnya!\n Contoh : *${prefix + command} will i get married* `)
+					const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Months More','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Setelah Dajjal Turun',' 1 Abad Lagi','69 Abad Lagi',`After This Command, You Too ${q}`]
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 Miku.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
 					break
