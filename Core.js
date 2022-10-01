@@ -1522,7 +1522,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\n*Bisa Digunakan*\nhwaifu, hentaivideo (3D), blowjobgif, hneko, gasm, trap, spank,\n\n*Tidak Bisa Digunakan*\nmasturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, cum, femdom, foot, gangbang, glasses, jahy,  `)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -4778,7 +4778,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-Saya *Miku Nakano*, Sebuah Bot yang dibuat oleh *Lord Fantox* dan di edit oleh *Ri* (ya edit bahasa doang :v).
+Saya *Miuna Shiodome*, Sebuah Bot yang dibuat oleh *Lord Fantox* dan di edit oleh *Ri* (ya edit bahasa doang :v).
+
+*Note :* Mohon izin dengan owner *Ri* Jika ingin mengundang *BOT* kedalam group anda.
 
 🔰 Awalan Perintahku adalah:  *${prefix}*
 
@@ -4824,7 +4826,7 @@ play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitte
 
  *━━━〈  🈴 Wibu bau bawang 🈴  〉━━━*
 
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
+crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga, Wangy 
 
  *━━━〈  ♨️ Informative ♨️  〉━━━*
 
@@ -4832,7 +4834,7 @@ animequote, quote, covid, earthquake, wiki
 
  *━━━〈  🎗 Lainnya 🎗  〉━━━*
 
-stickermeme, quotes, darkjoke 
+stickermeme, quotes, darkjoke(Difix nanti) 
 
  *━━━〈  🎐 Gabut 🎐  〉━━━*
 
