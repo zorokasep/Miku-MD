@@ -151,7 +151,8 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 mikutext = `
 Hallo Senpai! @${WAuserName.split("@")[0]},
 
-Watashi *Miuna Shiodome* Lolinya Admin *Ri*, Harap baca *Deskripsi Grup* terlebih dahulu ya! Selamat Datang Di *${metadata.subject}*.
+Watashi *Miuna Shiodome* Lolinya Admin *Ri*!
+Harap baca *Deskripsi Grup* terlebih dahulu ya! Selamat Datang Di *${metadata.subject}*.
 
 *Deskripsi Grup:*
 ${metadata.desc}
