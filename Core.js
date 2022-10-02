@@ -4782,7 +4782,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+I am *Miku Nakano*, a bot developed by *${metadata.subject}*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4842,10 +4842,6 @@ stickermeme, quotes, darkjoke
 
 reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
 
- *━━━〈  🪁 Essentials 🪁  〉━━━*
-
-qr, say, translate, fliptext, toletter
-
  *━━━〈  💥 NSFW 💥  〉━━━*
 
 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
@@ -4856,7 +4852,7 @@ qr, say, translate, fliptext, toletter
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *HOPE*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
