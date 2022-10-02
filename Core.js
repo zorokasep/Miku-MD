@@ -4798,15 +4798,15 @@ self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast
 
  *━━━〈  ⭕ Grup ⭕  〉━━━*
  
-promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
+promote(Naikin Jabatan), demote(Turunin Jabatan), revoke(Ubah Link GC), add(Tambahin orang), remove(Keluarin Orang), tagall(Tag semua orang), hidetag(Tag Tersembunyi), groupsetting, grouplink, setgcpp(Ubah Foto Grup), setname(Ubah Nama Grup), setdesc(Ubah Deskripsi), group, nsfw(Bokep) 
 
  *━━━〈  ➰ Anti Link ➰  〉━━━*
  
 antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
 
  *━━━〈  🔍 Kang Cari 🔍  〉━━━*
-
-play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
+ ❌ *Tidak Bisa Digunakan* ❌
+❌ play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone ❌ 
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
@@ -4826,15 +4826,20 @@ play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitte
 
  *━━━〈  🈴 Wibu bau bawang 🈴  〉━━━*
 
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga, Wangy 
+✅ waifu ✅ waifu3 ✅ awoo ✅ megumin
+✅ loli ✅ neko ✅ neko2 ✅ foxgirl
+✅ ppcouple ✅ feed
+✅ anime ✅ animewallpaper2 ✅ wallpaper ✅ animenom ✅ manga
+✅ crosplay ✅ tickle ✅ feed
+✅ Wangy 
 
  *━━━〈  ♨️ Informative ♨️  〉━━━*
 
-animequote, quote, covid, earthquake, wiki
+✅ animequote ❌ quotes ✅ covid ✅ earthquake ✅ wiki
 
  *━━━〈  🎗 Lainnya 🎗  〉━━━*
 
-stickermeme, quotes, darkjoke(Difix nanti) 
+✅ stickermeme ✅ sticker ♻️ darkjoke(Difix nanti) 
 
  *━━━〈  🎐 Gabut 🎐  〉━━━*
 
@@ -4854,7 +4859,7 @@ qr, say, translate, fliptext, toletter
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox* Modded By: *Ri*
+ Powered by: *Fantox* Bahasa By: *Ri*
 
  🔰 Untuk menggunakan salah satu perintah ketik: 
  " *${prefix}<Nama Perintah>* ".
