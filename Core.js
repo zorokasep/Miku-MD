@@ -3775,8 +3775,8 @@ case 'charactercheck':
          "mengajak nikah sepupu didepan keluarga besar",
          "SS History bokeplu ",
          "Sebutkeun Fetishmu!",
-	 "Hari ini sholat 5waktu"
-	 "katakan *AKU GAY* Kebapakmu"
+	 "Hari ini sholat 5waktu",
+	 "katakan *AKU GAY* Kebapakmu",
 	 "jikalau kamu dipaksa untuk meng NTR antara istri pahlawan dan raja, mana yg kamu pilih?",
          "Katakan MAMAT PEDO"
      ]
