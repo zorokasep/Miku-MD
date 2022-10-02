@@ -3832,7 +3832,7 @@ case 'nsfwmiku':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 reply(mess.wait)
-nye = `http://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${command}`
+nye = `http://api.lolhuman.xyz/api/gimage?apikey=2f70a5ab9a3f66ba171f396f&query=${command}`
 Miku.sendMessage(from, {image:{url:nye}, caption:"Master..."}, {quoted:m})
 break
 
