@@ -1450,7 +1450,9 @@ let buttonspro = [
         Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
         	
             break
-      case 'when':
+      case 'when {
+
+} while (condition);':
       if (isBan) return reply(mess.ban)	 			
                 if (isBanChat) return reply(mess.banChat)
       if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
