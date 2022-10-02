@@ -2803,9 +2803,9 @@ if (isBanChat) return reply(mess.banChat)
 case 'cekmati':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-             if (!text) return replay(`Gunakan Nama orang , Contoh : ${prefix + command} Mamat`)
+             if (!text) return replay(`Gunakan Nama orang \nContoh : ${prefix + command} Mamat`)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
-              reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
+              reply(`Nama : ${predea.data.name}\n*Mati Di umur :* ${predea.data.age} Year.\n\n_Cepatlah bertobat wahai sodaraku, karna kematian tidak ada yang tau_`)
               break	
 		
 		
