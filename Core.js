@@ -2808,6 +2808,18 @@ if (isBanChat) return reply(mess.banChat)
               reply(`Nama : ${predea.data.name}\n*Mati Di umur :* ${predea.data.age} Year.\n\n_Cepatlah bertobat wahai sodaraku, karna kematian tidak ada yang tau_`)
               break	
 		
+case 'gura':
+case 'gurastick':{
+	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: global.packname, author: global.author, })
+await fs.unlinkSync(encmedia)
+}
+break	
+		
 		
 case 'calculator': case 'cal': case 'calculate':{
    if (isBan) return reply(mess.banned)	 			
