@@ -58,14 +58,14 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'DONE',
-    useradmin: 'KID, look like you are not ADMIN',
+    jobdone: '✅ DONE',
+    useradmin: 'KID, look like you are not *⚠️ ADMIN ⚠️*',
     botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-    botowner: 'KID look like you are not BOT owner',
+    botowner: 'KID look like you are not BOT *⚠️ owner ⚠️*',
     grouponly: 'This command is only made for *Groups*, Baka!',
     privateonly: 'This command is only made for *Private Chat*, Baka!',
     botonly: 'Only the *Bot itself* can use this command!',
-    waiting: 'Sending',
+    waiting: 'Sending ⚡',
     nolink: 'Please provide me *link*, Baka!',
     error: 'An error occurd!',
     banned: 'You are *Banned* fron using commands!',
