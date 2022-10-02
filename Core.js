@@ -4648,11 +4648,10 @@ replay(teks)
 break
 
 case "darkjoke":
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 var res = await Darkjokes()
-teks = "\nDarkjokes"
+teks = "\nDarkjokes*"
 Miku.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : m })
 break
 
