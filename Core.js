@@ -1522,7 +1522,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\n*Bisa Digunakan*\nhwaifu, hentaivideo (3D), blowjobgif, hneko, gasm, trap, spank,\n\n*Tidak Bisa Digunakan*\nmasturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, cum, femdom, foot, gangbang, glasses, jahy,  `)
+        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\n✅*Bisa Digunakan*✅\nhwaifu, hentaivideo (3D), blowjobgif, hneko, gasm, trap, spank,\n\n❌*Tidak Bisa Digunakan*❌\nmasturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, cum, femdom, foot, gangbang, glasses, jahy,  `)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
