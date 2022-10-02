@@ -3863,7 +3863,7 @@ if (!m.isGroup) return replay(mess.grouponly)
 if (!AntiNsfw) return reply(mess.nonsfw)
 try{
 reply(mess.waiting)
-NoHorny = await fetchJson(`https://gelbooru.com/index.php?page=post&s=list&tags=${command}`)
+NoHorny = await fetchJson(`https://api.xteam.xyz/randomimage/${command}?APIKEY=70fbbb7a90d2a51a`)
 YesHorny = await getBuffer(NoHorny.result)
 Miku.sendMessage(from, {image:YesHorny},{quoted:m})
 } catch (e) {error("Error")}	
