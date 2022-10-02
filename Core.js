@@ -2791,7 +2791,7 @@ let mentioned = participants.map(v => v.jid)
             }
             break
 
-case 'Kapan':
+case 'when':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 				if (!text) return replay(`Tambahin Textnya!\n Contoh : *${prefix + command} will i get married* `)
