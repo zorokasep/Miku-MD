@@ -4782,7 +4782,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *${metadata.subject}*.
+I am *Miku Nakano*, a bot developed by *HOPE*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4852,7 +4852,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
 
  『  *${global.BotName}*  』
- Powered by: *HOPE*
+ Powered by: *${metadata.subject}*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
