@@ -1752,7 +1752,26 @@ case 'coffee': case 'kopi': {
                 }
                 break
 
- 
+ case 'nhentai':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+                    henid = args[0]
+                    get_result = await fetchJson(`https://nhentai.net/g/${henid}`)
+                    get_result = get_result.result
+                    ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
+                    ini_txt += `Title Native : ${get_result.title_native}\n`
+                    ini_txt += `Read Online : ${get_result.read}\n`
+                    get_info = get_result.info
+                    ini_txt += `Parodies : ${get_info.parodies}\n`
+                    ini_txt += `Character : ${get_info.characters.join(", ")}\n`
+                    ini_txt += `Tags : ${get_info.tags.join(", ")}\n`
+                    ini_txt += `Artist : ${get_info.artists}\n`
+                    ini_txt += `Group : ${get_info.groups}\n`
+                    ini_txt += `Languager : ${get_info.languages.join(", ")}\n`
+                    ini_txt += `Categories : ${get_info.categories}\n`
+                    ini_txt += `Pages : ${get_info.pages}\n`
+                    ini_txt += `Uploaded : ${get_info.uploaded}\n`
+                    reply(ini_txt)
+                    break
 
 case 'emojimix': {
 	   if (isBan) return reply(mess.banned)	 			
