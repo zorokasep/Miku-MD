@@ -16,7 +16,18 @@ const figlet = require('figlet')
 const { color } = require('./lib/color')
 
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+import { WAMessage, WASocket } from '@adiwajshing/baileys'
+import { Serialize } from '@libs/utils/serialize'
 
+interface CommandObject {
+    client: WASocket
+    message: WAMessage
+    command: string
+    prefix: string
+    args: string[]
+    fullArgs: string
+    msg: Serialize
+}
 async function startMiku() {
 console.log(color(figlet.textSync('Miku Bot MD', {
 		font: 'Pagga',
