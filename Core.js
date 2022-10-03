@@ -1760,6 +1760,24 @@ case 'coffee': case 'kopi': {
                     ini_buffer = await getBuffer(get_result)
                     await miku.sendMessage(from, ini_buffer, document, { quoted: lol, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
                     break
+		
+ case 'nhentaisearch':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`https://nhentai.net/search/?q${query}`)
+                    get_result = get_result.result
+                    ini_txt = "Result : \n"
+                    for (var x of get_result) {
+                        ini_txt += `Id : ${x.id}\n`
+                        ini_txt += `Title English : ${x.title_english}\n`
+                        ini_txt += `Title Japanese : ${x.title_japanese}\n`
+                        ini_txt += `Native : ${x.title_native}\n`
+                        ini_txt += `Upload : ${x.date_upload}\n`
+                        ini_txt += `Page : ${x.page}\n`
+                        ini_txt += `Favourite : ${x.favourite}\n\n`
+                    }
+                    reply(ini_txt)
+                    break		
 
 case 'emojimix': {
 	   if (isBan) return reply(mess.banned)	 			
