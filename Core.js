@@ -4779,7 +4779,11 @@ break
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
- let metadata = await Miku.groupMetadata(anu.id)  
+    
+    Miku.ev.on('group-participants.update', async (anu) => {
+        console.log(anu)
+      
+    let metadata = await Miku.groupMetadata(anu.id)
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
 I am *Miku Nakano*, a bot developed by *HOPE*.
@@ -4874,7 +4878,9 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
                     
                 }
             Miku.sendMessage(m.chat, buttonMessage,{ quoted:m })
-                }
+                
+            })
+}
 break
  
 
