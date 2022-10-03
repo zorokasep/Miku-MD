@@ -17,8 +17,7 @@ const { color } = require('./lib/color')
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
 const { getContentType, MessageUpdateType, WAMessage, WASocket } = require('@adiwajshing/baileys')
-const { commands } = require('@libs/constants/command')
-const { ICommand } = require('@libs/builders/command')
+
 const { serialize } = require('@libs/utils/serialize')
 const { cooldown } = require('@libs/utils/cooldown')
 
