@@ -18,10 +18,6 @@ const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream
 
 const { getContentType, MessageUpdateType, WAMessage, WASocket } = require('@adiwajshing/baileys')
 
-const { serialize } = require('@libs/utils/serialize')
-const { cooldown } = require('@libs/utils/cooldown')
-
-
 async function startMiku() {
 console.log(color(figlet.textSync('Miku Bot MD', {
 		font: 'Pagga',
