@@ -4898,7 +4898,8 @@ case '':
                     buttons: butRun,
                     headerType: 4
                 }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+            //Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+            Miku.sendMessage(m.chat, { video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true, caption: needhelpmenu }, { quoted: m }).catch((err) => reply(mess.error))
                 }
 break
 
