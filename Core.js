@@ -1757,7 +1757,7 @@ case 'coffee': case 'kopi': {
                     henid = args[0]
                     get_result = await fetchJson(`https://nhentai.net/g/${henid}`)
                     get_result = get_result.result
-                    ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
+                    let details = `*Judul :* ${result.title}\n`;
                     ini_txt += `Title Native : ${get_result.title_native}\n`
                     ini_txt += `Read Online : ${get_result.read}\n`
                     get_info = get_result.info
