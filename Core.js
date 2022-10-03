@@ -3986,8 +3986,10 @@ break
                 case 'shinobu':
                 case 'megumin':
                 case 'wallnime':
-                    getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=08072000MuhammadRioAdrian`).then((gambar) => {
-                        Miku.sendMessage(from, {image:{url:nye}, caption:"Master..."}, {quoted:m})
+                if (!isBotAdmins) return replay(mess.botadmin)
+		 if (!isCreator) return replay(mess.botowner)    
+		getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=08072000MuhammadRioAdrian`).then((gambar) => {
+                        Miku.sendMessage(from, {image:{url:getBuffer}, caption:"Aku Crottttt}, {quoted:m})
                     })
                     break
                 case 'chiisaihentai':
@@ -4009,8 +4011,10 @@ break
                 case 'biganimetiddies':
                 case 'animebellybutton':
                 case 'hentai4everyone':
-                    await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=08072000MuhammadRioAdrian`).then((gambar) => {
-                        Miku.sendMessage(from, gambar, image, { quoted: lol })
+                     if (!isBotAdmins) return replay(mess.botadmin)
+		 if (!isCreator) return replay(mess.botowner)
+		 await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=08072000MuhammadRioAdrian`).then((gambar) => {
+                      	Miku.sendMessage(from, {image:{url:getBuffer}, caption:"Master..."}, {quoted:m})
                     })
                     break
 		
