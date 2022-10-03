@@ -2270,7 +2270,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
- if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ if (!isCreator) return replay(mess.botowner)
  if (args[0] === "on") {
  if (AntiNsfw) return replay('Udah dihidupin bang')
  ntnsfw.push(from)
