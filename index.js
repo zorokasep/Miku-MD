@@ -150,7 +150,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hallo Senpai! @${WAuserName.split("@")[0]},
+Hello Senpai! @${WAuserName.split("@")[0]},
 
 Watashi *Miuna Shiodome* Lolinya Admin *Ri*!
 Harap baca *Deskripsi Grup* terlebih dahulu ya! 
@@ -161,7 +161,7 @@ ${metadata.desc}
 `
 
     let buttonMessage = {
-    image: await getBuffer(ppgroup),
+    //image: await getBuffer(ppgroup),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
@@ -178,7 +178,7 @@ Semoga *Colimu* tidak nickmat lagi.
 `
 
     let buttonMessage = {
-    image:await getBuffer(ppuser),
+    //image:await getBuffer(ppuser),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
