@@ -3987,7 +3987,7 @@ break
                 case 'megumin':
                 case 'wallnime':
                     getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=08072000MuhammadRioAdrian`).then((gambar) => {
-                        Miku.sendMessage(from, gambar, image, { quoted: lol })
+                        Miku.sendMessage(from, {image:{url:nye}, caption:"Master..."}, {quoted:m})
                     })
                     break
                 case 'chiisaihentai':
