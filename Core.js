@@ -1481,7 +1481,12 @@ replay('This Group has been *unbanned* from using me!')
   }
   break
 
-
+ case 'konachan':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} azur_lane`)
+                    query = args.join(" ")
+                    ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/konachan?apikey=2f70a5ab9a3f66ba171f396f&query=${query}`)
+                    await lolhuman.sendMessage(from, ini_buffer, image, { quoted: lol })
+                    break
 
 
 case 'botgrups':
