@@ -1760,7 +1760,7 @@ case 'coffee': case 'kopi': {
  case 'nhentaipdf':
                     if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
                     henid = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/08072000MuhammadRioAdrian?apikey=${apikey}`)
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=08072000MuhammadRioAdrian`)
                     get_result = get_result.result
                     ini_buffer = await getBuffer(get_result)
                     await miku.sendMessage(from, ini_buffer, document, { quoted: lol, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
