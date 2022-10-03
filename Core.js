@@ -1481,7 +1481,7 @@ replay('This Group has been *unbanned* from using me!')
   }
   break
 
-  import { NHentai } from '@shineiichijo/nhentai-ts'
+ 
 
 const nhentai = new NHentai()
 ;(async () => {
