@@ -1542,7 +1542,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\n✅*Bisa Digunakan*✅\nhwaifu, hentaivideo (3D), blowjobgif, hneko, gasm, trap, spank,\n\n❌*Tidak Bisa Digunakan*❌\nmasturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, cum, femdom, foot, gangbang, glasses, jahy,  `)
+        reply(` *━━━〈  📛 Menu Bokep 📛  〉━━━*\n\n✅*Bisa Digunakan*✅\nnekopoi, nhentaipdf, hwaifu, hentaivideo (3D), blowjobgif, hneko, gasm, trap, spank,\n\n❌*Tidak Bisa Digunakan*❌\nmasturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, cum, femdom, foot, gangbang, glasses, jahy,  `)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -1772,14 +1772,7 @@ case 'coffee': case 'kopi': {
                 }
                 break
 
- case 'nhentaipdf':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
-                    henid = args[0]
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=08072000MuhammadRioAdrian`)
-                    get_result = get_result.result
-                    ini_buffer = await getBuffer(get_result)
-                    await miku.sendMessage(from, ini_buffer, document, { quoted: lol, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
-                    break
+
 		
  case 'nhentaisearch':
                     if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
@@ -3913,6 +3906,50 @@ YesHorny = await getBuffer(NoHorny.result)
 Miku.sendMessage(from, {image:YesHorny},{quoted:m})
 } catch (e) {error("Error")}	
 break
+
+
+
+case 'nhentaipdf':
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(mess.grouponly)
+if (!AntiNsfw) return reply(mess.nonsfw)
+reply(mess.waiting)
+
+if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+henid = args[0]
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=08072000MuhammadRioAdrian`)
+get_result = get_result.result
+ini_buffer = await getBuffer(get_result)
+await Miku.sendMessage(from, ini_buffer, document, { quoted:m, mimetype: Mimetype.pdf, filename: `${henid}_by_M.pdf` })
+
+break
+
+
+case 'nekopoi':
+if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
+ini_url = args[0]
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=08072000MuhammadRioAdrian&url=${ini_url}`)
+get_result = get_result.result
+ini_txt = `Title : ${get_result.anime}\n`
+ini_txt += `Porducers : ${get_result.producers}\n`
+ini_txt += `Duration : ${get_result.duration}\n`
+ini_txt += `Size : ${get_result.size}\n`
+ini_txt += `Sinopsis : ${get_result.sinopsis}\n`
+link = get_result.link
+for (var x in link) {
+            ini_txt += `\n${link[x].name}\n`
+            link_dl = link[x].link
+         for (var y in link_dl) {
+          ini_txt += `${y} - ${link_dl[y]}\n`
+                        }
+                    }
+ ini_buffer = await getBuffer(get_result.thumb)
+   await Miku.sendMessage(from, ini_buffer, image, { quoted: m, caption: ini_txt })
+ break
+
+
+
 
 case 'spank':
     if (isBan) return reply(mess.banned)	 			
