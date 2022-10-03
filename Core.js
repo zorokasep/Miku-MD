@@ -1481,6 +1481,21 @@ replay('This Group has been *unbanned* from using me!')
   }
   break
 
+  import { NHentai } from '@shineiichijo/nhentai-ts'
+
+const nhentai = new NHentai()
+;(async () => {
+    //searches for manga
+    const { data } = await nhentai.search('loli' /* title of the doujin to search */, { page: 1 } /* Page of the search */)
+    const doujin = data[0]
+    //gets the contents of a doujin
+    const { images } = await doujin.getContents()
+    console.log(images.pages) //pages of the doujin
+    //builds a PDF from the doujin pages
+    await images.PDF('loli.pdf' /* Filename of where the PDF should be saved */) //will return a Buffer if no filename is provided
+})()		
+		
+		
  case 'konachan':
                     if (args.length == 0) return reply(`Example: ${prefix + command} azur_lane`)
                     query = args.join(" ")
