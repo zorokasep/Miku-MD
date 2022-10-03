@@ -3975,6 +3975,46 @@ reply(mess.waiting)
                 })
 break
 
+		case 'art':
+                case 'elf':
+                case 'loli':
+                case 'neko':
+                case 'waifu':
+                case 'shota':
+                case 'husbu':
+                case 'sagiri':
+                case 'shinobu':
+                case 'megumin':
+                case 'wallnime':
+                    getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${apikey}`).then((gambar) => {
+                        Miku.sendMessage(from, gambar, image, { quoted: lol })
+                    })
+                    break
+                case 'chiisaihentai':
+                case 'trap':
+                case 'blowjob':
+                case 'yaoi':
+                case 'ecchi':
+                case 'hentai':
+                case 'ahegao':
+                case 'hololewd':
+                case 'sideoppai':
+                case 'animefeets':
+                case 'animebooty':
+                case 'animethighss':
+                case 'hentaiparadise':
+                case 'animearmpits':
+                case 'hentaifemdom':
+                case 'lewdanimegirls':
+                case 'biganimetiddies':
+                case 'animebellybutton':
+                case 'hentai4everyone':
+                    await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${apikey}`).then((gambar) => {
+                        Miku.sendMessage(from, gambar, image, { quoted: lol })
+                    })
+                    break
+		
+		
 case 'hentai-neko' :
 case 'hneko' :
     if (isBan) return reply(mess.banned)	 			
