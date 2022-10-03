@@ -4698,12 +4698,12 @@ reply(mess.waiting)
 break
 
 
-case 'loli' :
+case 'akecil' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)	
-    waifuddd = await axios.get('https://api.lolhuman.xyz/api/random/loli?apikey=08072000MuhammadRioAdrian')
+    waifuddd = await axios.get('waifu.pics')
  var wbuttsssr = [
     {buttonId: `-loli`, buttonText: {displayText: `Lanjut mhank`}, type: 1},
     ]
