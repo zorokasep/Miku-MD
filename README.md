@@ -17,11 +17,7 @@
     <img src="https://img.shields.io/github/stars/FantoX001/Miku-MD?style=social">
   </a>
 
-<p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD">
-    <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Miku-MD.visitor-badge&left_text=Total%20Repo%20Visits">
-    
-    
+ 
 <a href="https://github.com/FantoX001">
     <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
@@ -98,7 +94,7 @@ heroku/nodejs
 <a href="https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
-## ✧✧✧ CMD Deployment Method
+## ✧✧✧ CMD Deployment Method (Without downloading this code as .zip)
 ```
 git clone https://github.com/FantoX001/Miku-MD.git
 cd Miku-MD
@@ -106,13 +102,21 @@ npm i
 npm start
 ```
 
-### ✧ Requirements for CMD istallation:
-- Git
-- Node.js
-- Libwebp
-- FFmpeg
+## ✧✧✧ CMD  / VS code Deployment Method (After downloading this code as .zip)
+- Extract the .zip and open Vs code / Cmd in that directory and give thesse following commands one-by-one:
+```
+npm i
+npm start
+```
 
-Note: If you don't pre-install these plugins before CMD Installation bot couldn't execute name commands!
+
+### ✧ Requirements for CMD/VS code istallation:
+- [Node.js](https://nodejs.org/en/download/)
+- [Git](https://github.com/git-guides/install-git)
+- FFmpeg ( [for Windows](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) or [for Linux](https://www.tecmint.com/install-ffmpeg-in-linux/) or [for Mac](https://ffmpeg.org/download.html) )
+- Libwebp
+
+Note: If you don't pre-install these plugins before CMD / VS code Installation bot will not start!
 </br> 
 
 ## ✧✧✧ Termux Deployment Method
@@ -154,7 +158,10 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 
 ## ✧ Contribution:
-- I don't have any contributor in this project. Feel free to contribute.
+- Project [Contributors](https://github.com/FantoX001/Miku-MD/graphs/contributors)
+- There are many more contributors in this project.
+- Please feel free to contribute in this project. I will merge your respected contribute if i see it's really necessary.
+
 
 
 
@@ -169,3 +176,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 -   `Arus~Bots`, my lovely team mates for [Mizuhara](https://github.com/Arus-Bots/Mizuhara) and Support.
 -   `Xeon` for [Cheems](https://github.com/DGXeon/CheemsBot-MD2) as a Base.
 -   `Zhwzein` for [Killua](https://github.com/zhwzein/Killua-Zoldyck)
+-   Note: Bot's almost all of the commands works with APIs and Modules so thanks to all API/Module owners for providing your great work for free and all API/Module related credit goes to you guys. 
+
+
+</p>
