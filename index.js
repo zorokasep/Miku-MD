@@ -121,7 +121,7 @@ return list[Math.floor(list.length * Math.random())]
 }
 
 
-
+/*
 Miku.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
        
@@ -186,7 +186,7 @@ I hope you will come back soon, but we are not going to miss you though!
                 console.log(err)
             }
     })
-    
+    */
 
 
     Miku.decodeJid = (jid) => {
