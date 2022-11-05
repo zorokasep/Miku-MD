@@ -18,9 +18,9 @@ global.BotSourceCode = "YOU'LL NOT GET IT😂🌝"
 global.SupportGroupLink = "👀✨"
 global.sessionName = "session"
 
-// Prefix //
-// If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+
+
+global.prefa = ['-'] // Prefix ---  change it to anythong you want except @//
 
 
 global.location = "Gujarat, India"

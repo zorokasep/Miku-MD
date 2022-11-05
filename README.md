@@ -25,11 +25,53 @@
       
 </br> 
    
-#### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 2 days because i am continuously debugging it and making major changes in it.
-</br>
+## ✧✧ Temporarily not Maintained anymore. Thank You so much guys for your love and support 💕. 
+</br></br>
   
+  
+## ✧✧ Setup before deploy (Optional):
+### Go to `config.js`
+-  To change the `Owner Number`, go to line no `10`, `11` and `12` [ Note there 91 is my country code don't put + or spaces there ]
+-  Change `Bot Prefix` in line no `23` inside global.prefa. [ Put anything you want except @ ] 
+-  Change `Owner Name` in line no `16`
+-  Change `Sticker packname` and `author` in line no `14` and `15`
+<br>
+<br>
+
+## ✧✧✧ Vulnerability Report 
+- In a recent vulnerability test I fount that this bot contains a major vulnerability which can let `your WhatsApp accout be accessed by the Hacker`. Actually every 3rd party things contains some hidden vulnerability but here i am sharing that vulnerability with you as an warning. Which is `only effective if you use repl.it scanner`. [ It will be fixed soon so don't worry. ]
+
+- It can be avoided by installing bot in `Termux`, `VS code` etc. physical deploy methods or using other session generators.
+- I made this bot as an open source project but as it's dev I don't want user's account to be hacked. So I am working to fix it as soon as possible.
+- Stay safe and stay updated.
+
+<br>
+<br>
+  
+## ✧✧✧ Recent Patch notes
+<details open>
+<summary>Read recent Patch notes of Miku</summary>
+<br>
+
+```
+✧ Added pm2 worker.
+✧ Fixed "Play" and related commands.
+✧ Added Ytdl-Core.
+✧ Added "add" command [Usage: -add 91 810xxxxxxx  where, 91 is country code and other part in number.]
+✧ Added "say" command using Text-to-speech [Usage: -say Hello everyone]
+✧ Bot can delete other people's messages now. [Condition: Both bot and user must be admin!]
+✧ Fixed -hentaivideo command.
+✧ Disabled Dm autoreply.
+✧ More fixes soon...[Contact me via Telegram or WhatsApp for report or issues].
+
+```
+
+</details>
 
 ## ✧✧✧ Why use Miku as your Base?
+<details open>
+<summary>Highlights of Miku MD</summary>
+<br>
 
 ```
 1. Copyright Free.
@@ -47,6 +89,8 @@
 
 -regards FantoX001
 ```
+
+</details>
 </br>
 
 ## ✧✧✧ Video tutorial for Heroku Deploy:
@@ -57,7 +101,7 @@ Here's the Video Tuturial for Deploying and Hosting Miku Bot on Heroku.
 
 ## ✧✧✧ Heroku Deployment Method:
 
-#### ✧ `Fork` this repo.
+#### ✧ [Fork](https://github.com/FantoX001/Miku-MD/fork) this repo.
 
 #### ✧ Click this scan button below and scan the given QR within 15 seconds from your WhatsApp. 
 <a href="https://miku-qr--fantox001.repl.co/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
@@ -66,7 +110,7 @@ Here's the Video Tuturial for Deploying and Hosting Miku Bot on Heroku.
 
 #### <a href="https://replit.com/@FantoX001/Miku-QR?v=1"><img src="https://i.ibb.co/pPQjJL2/replit-logo-png-transparent.png" alt="replit-logo-png-transparent" border="0"  width="120"></a>
 #### ✧ Download the `session.json` file and upload it on the hompage of your `Fork`.
-#### ✧ Go to your `Heroku` account.
+#### ✧ Go to your [Heroku](https://www.heroku.com/) account.
 #### ✧ Create a `random app` in Heroku with any name.
 #### ✧ Connect your `GitHub` with `Heroku`
 #### ✧ Then connect `Miku's repo` from your GitHub.
@@ -137,7 +181,7 @@ npm i
 npm start
 ```
 
-## ✧✧✧ To keep Miku alive without internet 24/7
+## ✧✧✧ To keep Miku alive without internet 24/7 (Termux, Vs Code etc. physical deploy only)
 
 ```
 npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
