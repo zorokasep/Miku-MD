@@ -1502,6 +1502,547 @@ replay('This Group has been *unbanned* from using me!')
   }
   }
   break
+		
+case 'support': case 'casino': {
+     if (!m.isGroup) return reply(mess.grouponly)
+     await Miku.sendMessage(`${m.sender}`, 
+            {text: `*🛑 CASINO GC*\n\n *📮【About Group】:* This is a suggestion/gamble group for ahmii( New Commands/Bugs)\n\n*🧮【Link】:* https://chat.whatsapp.com/CqGuRYlZaNILMo46OVZZTMl\n`},
+            { quoted: m }
+        )
+        return replay(`*🃏I s𝐞𝐧𝐭 gamble group link in DM 🀄*`) //.catch((reason: Error) => M.reply(`an error occurred, Reason: ${reason}`))
+    }
+    break
+
+case 'repo': case 'botrepo':
+    
+    reply(`*❛ Source Code of top bot ❜* \n\n\n_Miku ➻ https://github.com/FantoX001/Miku-MD_\n\n_Sector ➻ https://github.com/SecktorBot/Secktor-Md_\n\n_Ethan-v2 ➻ https://github.com/jayjay-ops/Miku-MD_\n\n\n*Hosting Tutorial ~ https://youtu.be/fZdM7Ahb4JE*`)
+    break
+
+case 'details': case 'about': {
+          if (isBan) return replay(mess.banned)
+          await Miku.sendMessage(`${m.sender}`, 
+            {text: `*❗🄴🅃🄷🄰🄽-🄱🄾🅃*\n\n *📮【About】:* 𝑨𝒖𝒕𝒐𝒎𝒂𝒕𝒆𝒅 𝑯𝒆𝒍𝒑𝒇𝒖𝒍/𝑭𝒖𝒏 𝑩𝒐𝒕 𝒕𝒐 𝒎𝒂𝒌𝒆 𝒍𝒊𝒇𝒆 𝒆𝒂𝒔𝒊𝒆𝒓 𝒐𝒏 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑\n\n*🏅【Support】:* https://www.instagram.com/jayjay_ops\n\n*🛸【Group】:* http://gg.gg/MikuSupport \n`},
+            { quoted: m }
+        )
+        return replay(`🧧 𝐒𝐞𝐧𝐭 𝐲𝐨𝐮 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐢𝐧𝐟𝐨 𝐢𝐧 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐥 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 🧧`);   //.catch((reason: Error) => M.reply(`an error occurred, Reason: ${reason}`))
+    }
+    break
+
+if (!isCmd && m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168777&key=qRlSGRCg0wmzNvkJ&uid=[uid]&msg=[${budy}]`)
+    txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
+
+
+case 'rules': case 'botrule': {
+          if (isBan) return replay(mess.banned)
+          mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+          const rule =  `_*❛ ╾╼🎀[Rules]🎀╾╼ ❜*_\n\n\n*➻* _Bot won't join a group it was removed from._\n\n*➻* _use -ahmii to get the Official group link and support link_\n\n*➻* _Use ${prefix}bot/chat to chat with ai chat bots..._\n\n*➻* _If you want to add ahmii-Bot in your group then contact the owner by typing *!owner/!mods*_ \n\n*➻* _Dont use wrong command, use the command given in the *help list*_ \n\n*➻* _Dont spam the bot with commands if the bot is not responding, its means the bot maybe offline or under maintenance._ \n\n*➻* _Dont Dm the bot_ \n\n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BAN SOON* 🚫 `
+          let law = [
+                {buttonId: `${prefix}rules`, buttonText: {displayText: 'Rules'}, type: 1}
+                ]
+                let buttonMessage = {
+                    file: Miku.sendMessage(m.chat,{video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,caption:rule},{quoted:m}),
+                    caption: rule,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+    }
+    break
+
+
+
+
+ 
+
+//=============Economy===============
+
+
+
+//--------------daily---------------------
+
+case 'daily': case 'reward': {
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+        let user = m.sender
+	const cara = "cara"
+	const daily  = await eco.daily(user, cara, 500); //give 500 for daily, can be changed
+	
+	        if (daily.cd) return replay(`You already claimed daily for today, come back in ${daily.cdL}`); //cdL is already formatted cooldown Left
+	
+            replay(`you claimed 💎${daily.amount} for daily`);        
+}
+break
+
+
+
+//---------------bank-increase--------------------
+
+case 'capacity':  case 'bankupgrade': {
+	//if (!isCreator) return replay(mess.botowner)
+	if (!text) return replay(`💴 *Bank-capacity* 💳\n\n1 | *1000 sp* = 💎100\n\n2 | *100000 sp* = 💎1000\n\n3 | *10000000 sp* = 💎10000000\n\nExample- ${prefix}capacity 1 OR ${prefix}bankupgrade 1000`)	
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        const user = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+	const cara = "cara"
+	let value = text.trim();
+	let k = parseInt(value)
+	const balance  = await eco.balance(user, cara) 
+  switch (value) {
+          case '1000':
+          case '1':
+          if (k > balance.wallet ) return replay(`*You need to pay 💎100 to increase bank capacity ~ 1000 sp*`);
+            const deduct1 = await eco.deduct(user, cara, 100);
+            const add1 = eco.giveCapacity(user, cara, 1000); 
+                await replay(`*1000 💎diamond storage has been added in ${pushname} bank*`)
+     
+                break
+          case '100000':
+          case '2':
+          if (k < balance.wallet) return replay(`*You need to pay 💎1000 to increase bank capacity ~ 100000 sp*`);
+            const deduct2 = await eco.deduct(user, cara, 1000);
+            const add2 = eco.giveCapacity(user, cara, 100000); 
+                await replay(`*100000 💎diamond storage has been added in ${pushname} bank*`)
+     
+                break
+          case '10000000':
+          case '3':
+          if (k < balance.wallet) return replay(`You need to pay 💎10000 to increase bank capacity ~ 1000 sp`);
+             const deduct3 = await eco.deduct(user, cara, 10000);
+             const add3 = eco.giveCapacity(user, cara, 10000000); 
+                 await replay(`*10000000 💎diamond storage has been added in ${pushname} bank*`)
+     
+               break
+  default:
+   await replay('*What are you trying to do*.')
+   
+   }
+
+}
+break
+
+
+
+//---------------deposit--------------------
+
+
+case 'deposit':  case 'pay-in': {
+        if (isBan) return reply(mess.banned)	 			
+        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+		if (!text) return replay("Provide the amount you want to deposit!");
+		const texts = text.trim();
+		const user = m.sender;
+		const cara = 'cara'
+        const deposit = await eco.deposit(user, cara, texts);
+            if(deposit.noten) return replay('You can\'t deposit what you don\'t have.'); //if user states more than whats in his wallet
+             replay(`Successfully Deposited 💎${deposit.amount} to your bank.`)
+		
+}
+break
+
+
+//--------------transfer---------------------
+
+
+
+case 'transfer':  case 'give': {
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+	let value = text.trim().split(" ");
+	if (value[0] === "") return replay(`Use ${prefix}transfer 100 @user`);
+	const target =
+			             m.quoted && m.mentionedJid.length === 0
+			             ? m.quoted.sender
+			             : m.mentionedJid[0] || null;    
+           if (!target || target === m.sender) return replay("what are you trying to do!")
+           if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
+        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
+        const cara = "cara"
+        const user1 = m.sender
+        const user2 = target
+		           const word = value[0];
+		           const code = value[1];
+		let d = parseInt(word)
+		if (!d) return replay("check your text plz u r using the command in a wrong way")
+		
+		const balance = await eco.balance(user1, cara); 
+        let a = (balance.wallet) < parseInt(word)
+        //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.	
+        if(a == true) return replay("you dont have sufficient money to transfer");
+        
+        const deduct = await eco.deduct(user1, cara, value[0]);
+        const give = await eco.give(user2, cara, value[0]);
+        replay(`*📠 Transaction successful*`)
+
+}
+break
+			
+	
+
+//--------------bank/wallet---------------------
+
+case 'wallet':  case 'purse': {
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+    const user = m.sender
+    const cara = "cara"
+    const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+    await replay(`*👛 ${pushname}'s Purse:*\n\n_💎${balance.wallet}_`);
+}
+break
+			
+	
+case 'bank':  case 'levee': {
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+    const user = m.sender
+    const cara = "cara"
+    const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+    await replay(`*🏦 ${pushname}'s Bank:*\n\n_💎${balance.bank}/${balance.bankCapacity}_`); 
+}
+break
+
+
+
+//--------------rob---------------------
+
+case 'rob':  case 'attack': {
+	if (!text) return replay(`Use ${prefix}rob @user`)
+	const target =
+			             m.quoted && m.mentionedJid.length === 0
+			             ? m.quoted.sender
+			             : m.mentionedJid[0] || null;    
+           if (!target || target === m.sender) return replay("what are you trying to do!")
+           if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
+        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
+        const cara = "cara"
+        const user1 = m.sender
+        const user2 = target
+	    const k = 250
+	const balance1  = await eco.balance(user1, cara)
+	const balance2  = await eco.balance(user2, cara)
+	const typ = ['ran','rob','caught'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+    if (k > balance1.wallet) return replay(`*☹️ You don't have enough money to pay incase you get caught*`);
+    if (k > balance2.wallet) return replay(`*Sorry, your victim is too poor 🤷🏽‍♂️ let go.*`);
+    let tpy = random
+  switch (random) {
+          case 'ran':
+                await replay(`*Your victim escaped, be more scaryðŸ˜¤ next time.*`)
+     
+                break
+          case 'rob':
+            const deduct1 = await eco.deduct(user2, cara, balance2.wallet);
+            const add2 = eco.give(user1, cara, balance2.wallet); 
+                await replay(`*🤑 Robbery operation successfully.🗡️*`)
+     
+                break
+          case 'caught':
+             const deduct2 = await eco.deduct(user1, cara, balance1.wallet); 
+                 await replay(`*Sorry FBI👮 caught up with you, you lost all 💎 in wallet.*`)
+     
+               break
+  default:
+   await replay('*What are you trying to do*.')
+   
+   }
+
+}
+break
+
+//--------------withdraw---------------------
+
+case 'withdraw':  case 'withdrawal': {
+      if (isBan) return reply(mess.banned)	 			
+      if (isBanChat) return reply(mess.bangc)
+      if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        const user = m.sender
+		if (!text) return replay("*Provide the amount you want to withdraw!*");
+		const query = text.trim();
+        const cara = 'cara'
+        const withdraw = await eco.withdraw(user, cara, query);
+        if(withdraw.noten) return replay('*🏧 Insufficient fund in bank*'); //if user states more than whats in his wallet
+        const add = eco.give(user, cara, query);
+          replay(`*🏧 ALERT*  _💎${withdraw.amount} has been added in your wallet._`)
+        
+}
+break
+
+
+//---------------gamble--------------------
+
+/*
+case 'gamble':  case 'bet': {
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+	const texts = text.trim().split(" ");
+		if (texts[0] === "")
+			return replay(
+				`Example:  ${prefix}gamble 100 direction(left,right,up,down)`
+			);
+    const opp = texts[1];// your value
+    const value = texts[0].toLowerCase();
+    if (!value) return replay("*Please, specify the amount you are gambling with!*");
+    if (!opp) return replay("*Specify the direction you are betting on!*");
+    let gg = parseInt(value)
+    if (!gg) return replay("*Check your text please, You are using the command in a wrong way*")
+    if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+    const user = m.sender //m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+    const cara = 'cara'
+    const balance = await eco.balance(user, cara); 
+    let g = (balance.wallet) > parseInt(value)
+    if(g == false) return replay(`*You don't have sufficient 💎 Diamond to gamble with*`);
+    let k = 50
+    let a = (k) > parseInt(value)
+   //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.	
+    if (a == true) return replay(`*Sorry ${pushname}, you can only gamble with more than 💎50.*`);
+                //if(balance.wallet < value) return replay('no enough money');
+    const f = ["left", "right", "up", "down"]
+    const r = f[Math.floor(Math.random () * f.length)]
+    if ( r == opp){
+    const give = await eco.give(user , cara, texts[0]);
+    replay(`*📉 You won 💎${texts[0]}*`)
+    }else{
+    const deduct = await eco.deduct(user, cara, texts[0]);
+    replay(`*📈 You lost 💎${texts[0]}*`)
+    }       
+     
+   
+}
+break
+*/
+
+
+
+case'gamble':  case 'lottery': {
+	 var response = await Miku.groupInviteCode(from)
+     var link1 = `https://chat.whatsapp.com/${response}`
+     var link2 = `https://chat.whatsapp.com/CqGuRYlZaNILMo46OVZZTM`
+     var texts = text.trim().split(" ");
+     var opp = texts[1];// your value
+     var value = texts[0].toLowerCase();
+     var gg = parseInt(value)
+     var user = m.sender //m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+     const cara = 'cara'
+     const balance = await eco.balance(user, cara); 
+     const g = (balance.wallet) > parseInt(value)
+     const k = 50
+     const a = (k) > parseInt(value)
+     const twice = gg*2
+     const f = ["up", "right", "left", "down", "up", "left", "down", "right", "up", "down", "right", "left"]
+     const r = f[Math.floor(Math.random () * f.length)]
+	 if (isBan) return reply(mess.banned)	 			
+     if (isBanChat) return reply(mess.bangc)
+     if (!m.isGroup) return reply(mess.grouponly)
+     if (link1 == link2){
+        if (texts[0] === "")
+			return replay(
+				`Example:  ${prefix}gamble 100 direction(left,right,up,down)`
+			);
+	    if (!value) return replay("*Please, specify the amount you are gambling with!*");
+        if (!opp) return replay("*Specify the direction you are betting on!*");
+        if (!gg) return replay("*Check your text please, You are using the command in a wrong way*")
+        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        if (g == false) return replay(`*You don't have sufficient 💎 Diamond to gamble with*`);
+        if (a == true) return replay(`*Sorry ${pushname}, you can only gamble with more than 💎50.*`);
+        if ( r == opp){
+           let give = await eco.give(user , cara, twice);
+           replay(`*📉 You won 💎${twice}*`)
+        }
+        else{
+           let deduct = await eco.deduct(user, cara, texts[0]);
+           replay(`*📈 You lost 💎${texts[0]}*`)
+         }
+     }
+     else{
+         replay(`*Gambling is allowed only in Casino/Gamble Group,*\n\ntype ${prefix}casino to get the group link`)
+     }
+}
+break
+
+
+
+
+
+
+//-----------------Slot----------------------
+
+case 'slot': case 'spin': {
+       if (isBan) return replay(mess.banned);
+       if (isBanChat) return replay(mess.bangc)
+       if (!m.isGroup) return replay(mess.grouponly)
+       var today = new Date();
+   if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0){
+       if (text == 'help') return replay(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎100 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
+       if (text == 'money') return replay(`*1:* Small Win --> +💎20\n\n*2:* Small Lose --> -💎20\n\n*3:* Big Win --> +💎100\n\n*4:* Big Lose --> -💎50\n\n*5:* 🎉 JackPot --> +💎1000`)
+       const fruit1= ["🥥", "🍎", "🍇"]
+       const fruit2 = ["🍎", "🍇", "🥥"]  
+       const fruit3 = ["🍇", "🥥", "🍎"]         
+       const fruit4 = "🍇"
+       const lose = ['*You suck at playing this game*\n\n_--> 🍍-🥥-🍎_', '*Totally out of line*\n\n_--> 🥥-🍎-🍍_', '*Are you a newbie?*\n\n_--> 🍎-🍍-🥥_']
+       const smallLose = ['*You cannot harvest coconut 🥥 in a pineapple 🍍 farm*\n\n_--> 🍍>🥥<🍍_', '*Apples and Coconut are not best Combo*\n\n_--> 🍎>🥥<🍎_', '*Coconuts and Apple are not great deal*\n\n_--> 🥥>🍎<🥥_']
+       const won = ['*You harvested a basket of*\n\n_--> 🍎+🍎+🍎_', '*Impressive, You must be a specialist in plucking coconuts*\n\n_--> 🥥+🥥+🥥_', '*Amazing, you are going to be making pineapple juice for the family*\n\n_--> 🍍+🍍+🍍_']             
+       const near = ['*Wow, you were so close to winning pineapples*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, you were so close to winning Apples*\n\n_--> 🍎+🍎-🍍_']          
+       const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎1000*']
+       const user = m.sender
+       const cara = "cara"
+       const k = 100
+       const balance1  = await eco.balance(user, cara)
+       
+       if (k > balance1.wallet) return replay(`You are going to be spinning on your wallet, you need at least 💎100`);
+       const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
+       const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
+       const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
+       //const f4 = fruit4[Math.floor(Math.random() * fruit4.length)];
+       const mess1 = lose[Math.floor(Math.random() * lose.length)];
+       const mess2 = won[Math.floor(Math.random() * won.length)];
+       const mess3 = near[Math.floor(Math.random() * near.length)];
+       const mess4 = jack[Math.floor(Math.random() * jack.length)];
+       const mess5 = smallLose[Math.floor(Math.random() * smallLose.length)];
+       
+       if ((f1 !== f2) && f2 !== f3){
+          const deduct1 = await eco.deduct(user, cara, 50);
+                 replay(`${mess1}\n\n*Big Lose -->* _💎50_`)
+       }
+       else if ((f1 == f2) && f2 == f3){
+          const give1 = await eco.give(user, cara, 100); 
+                replay(`${mess2}\n*_Big Win -->* _💎100_`)
+       }
+       else if ((f1 == f2) && f2 !== f3){
+          const give2 = await eco.give(user, cara, 20);
+                replay(`${mess3}\n*Small Win -->* _💎20_`)
+       }
+       else if ((f1 !== f2) && f1 == f3){
+          const deduct2 = await eco.deduct(user, cara, 20);
+                replay(`${mess5}\n\n*Small Lose -->* _💎20_`)
+       }
+       else if ((f1 !== f2) && f2 == f3){
+          const give4 = eco.give(user, cara, 20); 
+                replay(`${mess3}\n\n*Small Win -->* _💎20_`)
+       }
+       else if ((f1 == f2) && (f2 == f3) && (f3 == f4)){
+          const give5 = eco.give(user, cara, 1000);
+               replay(`${mess4}\n\n_🎊 JackPot --> _💎1000_`)
+       }
+       else { 
+               replay(`Do you understand what you are doing?`)
+       }
+    }
+    else{
+           replay(`*You can only play this game during weekends*\n\n*🌿 Friday*\n*🎏 Saturday*\n*🎐 Sunday*`)
+    }
+}
+break
+
+
+
+//=======================================
+
+
+case 'hi': case 'hello': {
+      replay(`Don't be scared, i am still active 😁`)
+    }
+    break		
+
+case 'bestcouple': case 'hp?':
+    
+    reply(`*huzee and patchie for eternity`)
+    break
+		
+case 'zaid': case 'zaidp':
+    
+    reply(`*chickna faislabadi munda`)
+    break		
+		
+
+case 'test': case 'testbot':
+    
+    reply(`*Everything is working fine, I guess`)
+    break
+
+case 'huzee': case 'luzee': 
+    
+    reply(`*One and only gay`)
+    break
+		
+case 'roastinghuzee': case 'rhuzee': 
+    
+    reply(`*men pindi boy hun mujy nae roast kr skty men pindi kw badmash hun masti mat kro`)
+    break
+		
+case 'marryme': case 'marry': 
+    
+    reply(`*only if you bend`)
+    break
+		
+case 'pengi': case 'leader': 
+    
+    reply(`Sexy leader of roninverse*`)
+    break
+		
+case 'ahmii': case 'azize': 
+    
+    reply(`Founder of roninverse*`)
+    break
+		
+case 'wassi': case 'patchie': 
+    
+    reply(`Founder of roninverse*`)
+    break
+		
+case 'q': case 'quote': 
+   fetch("https://animechan.vercel.app/api/random")
+          .then((response) => response.json())
+          .then((quote) => console.log(quote)); 
+   
+    break		
+		
+		
+case 'tashi': case 'tashikun': 
+    
+    reply(`most sexiest loli hunter*`)
+    break
+		
+case 'shuja': case 'kharian': 
+    
+    reply(`kharain ke machliii*`)
+    break		
+		
+case 'fuck': case 'fucku': 
+    
+    reply(`*says the guy with no pp`)
+    break
+		
+case 'don': case 'donn': 
+    
+    reply(`*asfar is the only don i know of`)
+    break
+		
+case 'saqib': case 'adv': 
+    
+    reply(`*adv.saqib is the most horny guy i have ever seen`)
+    break
+		
+case 'jan': case 'jaan': 
+    
+    reply(`*ji jaan ji🌚`)
+    break
+		
+	
+case 'happybirthday': case 'hb': 
+    
+    reply(`*happy birthday
+    hope your all birthday wishes come true
+    it's special day, get out there and enjoy
+    i hope your celebration give you many more memories. 
+    `)
+    break		
+		
 
 case 'support': case 'supportgc':
     
