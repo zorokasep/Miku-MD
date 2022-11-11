@@ -1379,7 +1379,11 @@ return list[Math.floor(list.length * Math.random())]
     if (smallinput.includes('hello')) {
       reply (`Hello *${pushname}*, I am *${BotName}*. How can i help you?`);
     } 
-
+   let smallinput = budy.toLowerCase()
+    if (smallinput.includes('test')) {
+      reply (`Everything is working fine, I guess`);
+    } 	
+	
     if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
       reply (`Konichiwa *${pushname}*, I am *${BotName}*. How can i help you?`);
     }
