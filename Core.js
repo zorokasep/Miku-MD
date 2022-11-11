@@ -5490,34 +5490,7 @@ const anyaarray= [
 
 break
 		
-case 'asuna':
-     if (isBan) return reply(mess.banned)	 			
-     if (isBanChat) return reply(mess.bangc)
-
-
-const write = `hers is some asuna for you`
-
-const asunaarray= [
-
-              "https://media.tenor.com/Fz3fwf0ETCoAAAAC/asuna-sao.gif",
-
-              "https://media.tenor.com/JjHKn_8TTl0AAAAd/asuna.gif",
-	
-              "https://media.tenor.com/dnx3u5OkjygAAAAd/asuna-sword-art-online.gif"
-
-              
-
-              ]
-
-              
-
-              const asunaselection = asunaarray[Math.floor(Math.random()*asunaarray.length)]
-
-        
-
-            Miku.sendMessage(from,{image:{url:asunaselection},caption:write},{quoted:m})
-
-break	
+   
 		
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
