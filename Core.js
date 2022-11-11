@@ -5277,11 +5277,14 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
 I am *Miku Nakano*, a bot developed by *Fantox*.
 
+*━━━〈  💥 Custom 💥  〉━━━*
+huzee,don,patchie,rhuzee,azize,pengi,tashi,marry,fuck,bestcouple
+	  
 🔰 My prefix is:  ${prefix}
 
 Here's the list of my Commands.
 
-
+WHY TIKTOK IS SO CRINGE🌚👈
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
@@ -5339,17 +5342,15 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
 qr, say, translate, fliptext, toletter, weather
 
- *━━━〈  💥 NSFW 💥  〉━━━*
-
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+ *━━━〈  💥 Custom 💥  〉━━━*
+huzee,don,patchie,rhuzee,azize,pengi,tashi,marry,fuck,bestcouple
 
 
 
 
  『  *${global.BotName}*  』
  Powered by: *Fantox*
+Modified by: *Ahmii*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
@@ -5448,6 +5449,36 @@ const mikuarray= [
 
 break
 
+	case 'anya':
+     if (isBan) return reply(mess.banned)	 			
+     if (isBanChat) return reply(mess.bangc)
+
+
+const write = `hers is some anya for you`
+
+const anyaarray= [
+
+              "https://fictionhorizon.com/wp-content/uploads/2022/06/FVjMFyjVEAAjBGG.jpg",
+
+              "https://fictionhorizon.com/wp-content/uploads/2022/05/spy-x-family-1-1024x576.jpg",
+	
+              "https://fictionhorizon.com/wp-content/uploads/2022/05/Anime_SpyxFamily_Featured-1-1024x576.jpg"
+
+              
+
+              ]
+
+              
+
+              const anyaselection = anyaarray[Math.floor(Math.random()*anyaarray.length)]
+
+        
+
+            Miku.sendMessage(from,{image:{url:anyaselection},caption:write},{quoted:m})
+
+break
+	
+		
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
