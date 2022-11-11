@@ -1402,7 +1402,9 @@ return list[Math.floor(list.length * Math.random())]
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
       reply (`Mention not *${pushname}* 😇. I am a bot afterall.`);
     }
-
+    if (smallinput.includes('marry me')|| smallinput.includes('will you marry me') || smallinput.includes('marry me miku')) {
+      reply (`*${pushname}* Only If You Bend`);
+    }
            
 
 switch(command) {
