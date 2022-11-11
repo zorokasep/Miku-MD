@@ -2770,7 +2770,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
-
+/*
    case 'nsfw': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -2803,6 +2803,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
+*/
 
    case 'ban': {
     if (isBan) return reply(mess.banned)	 			
