@@ -1494,6 +1494,8 @@ let off = banchat.indexOf(from)
 banchat.splice(off, 1)
 replay('This Group has been *unbanned* from using me!')
 } else {
+
+/*	
   let buttonsntnsfw = [
   { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
   { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
@@ -1502,6 +1504,8 @@ replay('This Group has been *unbanned* from using me!')
   }
   }
   break
+
+*/
 		
 case 'support': case 'casino': {
      if (!m.isGroup) return reply(mess.grouponly)
