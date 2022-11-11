@@ -1395,6 +1395,9 @@ return list[Math.floor(list.length * Math.random())]
     if (smallinput.includes('good night')) {
       reply (`Good night to you too *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
+    if (smallinput.includes('test')) {
+      reply (`Everything is working fine, I guess`);
+    }	
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
       reply (`Mention not *${pushname}* 😇. I am a bot afterall.`);
