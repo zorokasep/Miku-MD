@@ -1385,7 +1385,7 @@ return list[Math.floor(list.length * Math.random())]
     }
    
     if (smallinput.includes('bot')) {
-      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Ahmii* and currently being hosted by *${OwnerName}*`);
+      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Fantox* and currently being hosted by *${OwnerName}*`);
     }
 
     if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
@@ -1405,6 +1405,12 @@ return list[Math.floor(list.length * Math.random())]
     if (smallinput.includes('marry me')|| smallinput.includes('will you marry me') || smallinput.includes('marry me miku')) {
       reply (`*${pushname}* Only If You Bend`);
     }
+    if (smallinput.includes('fuck u')|| smallinput.includes('fuck you') || smallinput.includes('fuck')) {
+      reply (`*${pushname}* says the guy with no pp`);
+    }
+    if (smallinput.includes('anya')|| smallinput.includes('anya') || smallinput.includes('anyaa')) {
+      reply (`*${pushname}* type !anya to see anya`);
+    }	
            
 
 switch(command) {
@@ -5483,7 +5489,35 @@ const anyaarray= [
             Miku.sendMessage(from,{image:{url:anyaselection},caption:write},{quoted:m})
 
 break
+		
+case 'asuna':
+     if (isBan) return reply(mess.banned)	 			
+     if (isBanChat) return reply(mess.bangc)
+
+
+const write = `hers is some asuna for you`
+
+const asunaarray= [
+
+              "https://media.tenor.com/Fz3fwf0ETCoAAAAC/asuna-sao.gif",
+
+              "https://media.tenor.com/JjHKn_8TTl0AAAAd/asuna.gif",
 	
+              "https://media.tenor.com/dnx3u5OkjygAAAAd/asuna-sword-art-online.gif"
+
+              
+
+              ]
+
+              
+
+              const asunaselection = asunaarray[Math.floor(Math.random()*asunaarray.length)]
+
+        
+
+            Miku.sendMessage(from,{image:{url:asunaselection},caption:write},{quoted:m})
+
+break	
 		
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
