@@ -171,7 +171,7 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 Sayonara 👋, @${WAuserName.split("@")[0]},
 
-I hope you will come back soon, but we are not going to miss you though!
+Another virgin Left✨, but we are not going to miss you though!🐧
 `
 
     let buttonMessage = {
