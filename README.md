@@ -25,7 +25,7 @@
       
 </br> 
    
-## ✧✧ Temporarily not Maintained anymore. Thank You so much guys for your love and support 💕. 
+## ✧✧ Maintained by [Fantox](https://github.com/FantoX001) and [Jayjay-ops](https://github.com/jayjay-ops) for bug fixes and more improments. More features  are coming soon. Check this main repo once in week to stay updated about latest updates.
 </br></br>
   
   
@@ -56,11 +56,14 @@
 <br>
   
 ## ✧✧✧ Recent Patch notes
-<details open>
+<details close>
 <summary>Read recent Patch notes of Miku</summary>
 <br>
 
 ```
+✧ Added Forever worker again and removed pm2.
+✧ Fixed Heroku account ban issue.
+✧ Added Weather command. [Usage: -weather Kolkata]
 ✧ Fixed a critical security related vulnerability.
 ✧ Added single config prefix changing facility.
 ✧ Added pm2 worker.
@@ -78,8 +81,7 @@
 </details>
 
 ## ✧✧✧ Why use Miku as your Base?
-<details open>
-<summary>Highlights of Miku MD</summary>
+
 <br>
 
 ```
@@ -99,7 +101,6 @@
 -regards FantoX001
 ```
 
-</details>
 </br>
 
 ## ✧✧✧ Video tutorial for Heroku Deploy:
