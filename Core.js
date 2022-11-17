@@ -1373,9 +1373,8 @@ function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]
 }
 
-//Some special chat replies
 	
- let smallinput = budy.toLowerCase()
+	 let smallinput = budy.toLowerCase()
     if (smallinput.includes('hello')) {
       reply (`Hello *${pushname}*, I am *${BotName}*. How can i help you?`);
     } 
@@ -1406,7 +1405,8 @@ return list[Math.floor(list.length * Math.random())]
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
       reply (`Mention not *${pushname}* 😇. I am a bot afterall.`);
-    }      
+    }  
+           
 
 switch(command) {
 	
@@ -4766,7 +4766,7 @@ antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, ant
 
  *━━━〈  🔍 Search 🔍  〉━━━*
 
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
+play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
@@ -4790,7 +4790,7 @@ crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpa
 
  *━━━〈  ♨️ Informative ♨️  〉━━━*
 
-animequote, quote, covid, earthquake, wiki
+weather, animequote, quote, covid, earthquake, wiki
 
  *━━━〈  🎗 Others 🎗  〉━━━*
 
@@ -4839,7 +4839,15 @@ qr, say, translate, fliptext, toletter, weather
                 }
 break
  
+case 'weather':
+        if (isBan) return reply(mess.banned)
+        if (!args[0]) return reply("Enter your location to search weather.")
+         myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
+        const weathertext = `           🌤 *Weather Report* 🌤  \n\n🔎 *Search Location:* ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n🌡️ *Temperature:* ${myweather.data.main.temp}°C\n❄️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n📛 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
+        Miku.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
+
+        break
 case '':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
@@ -4961,15 +4969,6 @@ case 'add':{
                         return('Error!')
                     })
     break
-		 case 'weather':
-        if (isBan) return reply(mess.banned)
-        if (!args[0]) return reply("Enter your location to search weather.")
-         myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
-
-        const weathertext = `           🌤 *Weather Report* 🌤  \n\n🔎 *Search Location:* ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n🌡️ *Temperature:* ${myweather.data.main.temp}°C\n❄️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n📛 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
-        Miku.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
-
-        break
 
 
 
