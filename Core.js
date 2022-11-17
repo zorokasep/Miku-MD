@@ -4740,7 +4740,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano💝*, a bot developed by *Ɲᴇꪎꪎᴇʀ  ꢺᴀϻᴀ*.
+I am *𝐇𝐢𝐧𝐚𝐭𝐚💝*, a bot developed by *Ɲᴇꪎꪎᴇʀ  ꢺᴀϻᴀ*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4752,7 +4752,7 @@ Here's the list of my Commands.
 
 speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
  
- *━━━〈  🎀 Owner 🎀  〉━━━*
+ *━━━〈  🎀 Ɲᴇꪎꪎᴇʀ 🎀  〉━━━*
 
 self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
 
