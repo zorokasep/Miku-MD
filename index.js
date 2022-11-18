@@ -134,13 +134,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 try {
                     ppuser = await Miku.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://telegra.ph/file/b55256f02ac740c5e3992.jpg'
+                    ppuser = 'https://telegra.ph/file/f856973cc8047ad6aaf98.jpg'
                 }
 
                 try {
                     ppgroup = await Miku.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://telegra.ph/file/4cc2712eee93c105f6739.jpg'
+                    ppgroup = 'https://telegra.ph/file/383792a46d8918da39f4f.jpg'
                 }
 
                 let targetname = await Miku.getName(num)
