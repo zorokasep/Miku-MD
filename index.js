@@ -134,7 +134,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 try {
                     ppuser = await Miku.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://wallpapercave.com/wp/wp10753770.jpg'
+                    ppuser = 'https://telegra.ph/file/b55256f02ac740c5e3992.jpg'
                 }
 
                 try {
