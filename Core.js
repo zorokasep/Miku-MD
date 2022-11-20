@@ -4872,7 +4872,7 @@ case 'miku':
 
 const txt = `Do you love Hinata? Then we are the same.`
 const mikuarray= [
-            "https://tenor.com/en-IN/view/hinata-naruto-anime-blush-cute-kawaii-gif-21971306",
+            "https://a.uguu.se/HLaOKhhb.mp4'",
             "https://tenor.com/en-IN/view/hinata-hyuga-gif-25155882",
             "https://c.tenor.com/IWKYIP6AMIgAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/qE3H_Ae_jTQAAAPo/miku-nakano-nakano.mp4",
