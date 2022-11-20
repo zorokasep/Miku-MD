@@ -4871,7 +4871,7 @@ case 'Hinata':
     if (isBanChat) return reply(mess.bangc)
 
 const txt = `Do you love Hinata? Then we are the same.`
-const mikuarray= [
+const hinataarray= [
             "https://a.uguu.se/YAfXZWF.mp4'",
             "https://a.uguu.se/CcnQWzH.mp4'",
             "https://a.uguu.se/WsxOoRhS.mp4'",
