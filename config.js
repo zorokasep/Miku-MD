@@ -7,20 +7,20 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918101187835']
-global.OwnerNumber = ['918101187835']
-global.ownertag = ['918101187835']
-global.BotName = "Miku"
-global.packname = "Miku bot"
-global.author = "By: Fantox"
-global.OwnerName = "Fantox"
+global.Owner = ['919747145506']
+global.OwnerNumber = ['919747145506']
+global.ownertag = ['919747145506']
+global.BotName = "abhiiiee"
+global.packname = "abhiiiee"
+global.author = "By: abxii"
+global.OwnerName = "abxii"
 global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
 global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
 global.sessionName = "session"
 
 
 
-global.prefa = ['-'] // Prefix ---  change it to anythong you want except @//
+global.prefa = ['.'] // Prefix ---  change it to anythong you want except @//
 
 
 global.location = "West Bengal, India"
@@ -39,7 +39,7 @@ global.ErrorPic = fs.readFileSync("./Assets/pic7.jpg")
 
 global.ntilinkytvid = []
 global.ntilinkytch = []
-global.ntilinkig = []
+global.ntilinkinsta = []
 global.ntilinkfb = []
 global.ntilinktg = []
 global.ntilinktt = []
