@@ -4866,44 +4866,44 @@ break
 
 
 
-case 'Hinata':
+case 'hinata':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Hinata? Then we are the same.`
-const hinataarray= [
-            "https://a.uguu.se/YAfXZWF.mp4'",
-            "https://a.uguu.se/CcnQWzH.mp4'",
-            "https://a.uguu.se/WsxOoRhS.mp4'",
-            "https://c.tenor.com/qE3H_Ae_jTQAAAPo/miku-nakano-nakano.mp4",
-            "https://c.tenor.com/9ijVngbm_ZMAAAPo/itsuki-nakano-the-quintessential-quintuplets.mp4",
-            "https://c.tenor.com/Fz9xGVR_FHAAAAPo/miku-nakano-nakano-miku.mp4",
-            "https://c.tenor.com/ALV6SZoJZb8AAAPo/gotoubun-corada.mp4",
-            "https://c.tenor.com/QHefpWiqvN4AAAPo/blush-anime.mp4",
-            "https://c.tenor.com/NJVFjOYEcsIAAAPo/miku-gotoubun.mp4",
-            "https://c.tenor.com/DA88NW5x_0wAAAPo/miku-nakano-stare.mp4",
-            "https://c.tenor.com/zNTH_-ks3GEAAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/V9XEKQYRwrEAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
-            "https://c.tenor.com/GDH4WFhELpAAAAPo/anime-pout.mp4",
-            "https://c.tenor.com/ME0cvLQiW0kAAAPo/nakano-miku-go-toubun-no-hanayome.mp4",
-            "https://c.tenor.com/d5pE_0GJUf0AAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/zNTH_-ks3GEAAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/pCgBkgDBbnIAAAPo/nakano-miku-go-toubun-no-hanayome.mp4",
-            "https://c.tenor.com/6GTU3JEtpKoAAAPo/miku-nakano-the-quintessential-quintuplets.mp4",
-            "https://c.tenor.com/XNbmenhVucMAAAPo/5toubun-no-hanayome-gotoubun-no-hanayome.mp4",
-            "https://c.tenor.com/lyMqrhEK4scAAAPo/%EC%98%A4%EB%93%B1%EB%B6%84-5%EB%93%B1%EB%B6%84.mp4",
-            "https://c.tenor.com/vQ9TpmdjfWAAAAPo/cuteness-overload.mp4",
-            "https://c.tenor.com/PHngM6-NJVwAAAPo/miku-quintessential.mp4",
-            "https://c.tenor.com/yniTgeiOo4gAAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/AULffc4ZKFIAAAPo/miku-god-miku.mp4",
-            "https://c.tenor.com/Y8Y1GbmQSOIAAAPo/miku-nakano-quintessential-quintuplets.mp4",
-            "https://c.tenor.com/m0EjrelpOfkAAAPo/miku-nakano-nakano-miku.mp4",
-            "https://c.tenor.com/x6RTarQTMzoAAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/hUzZGMltInkAAAPo/gotoubun-corada.mp4",
-            "https://c.tenor.com/9-7azOBpr84AAAPo/miku-nakano-and-i-love-you.mp4",
-            "https://c.tenor.com/Ed5IC_yxZkoAAAPo/miku-nakano-gotoubun-no-hanayome.mp4",
-            "https://c.tenor.com/hDKieuZGiU0AAAPo/miku-nakano.mp4",
-            "https://c.tenor.com/WD8L3QLO024AAAPo/whaatt-the-quintessential-quintuplets.mp4"
+const txt = `Do you love Hinata? Then we are the same🐧.`
+const mikuarray= [
+            "https://tenor.com/en-IN/view/hinata-hyuga-gif-25155882",
+            "https://tenor.com/en-IN/view/hinata-hyuga-gif-20478406",
+            "https://tenor.com/en-IN/view/naruto-hyuuga-hinata-naruto-uzumaki-youd-make-a-great-wife-blushing-gif-17491012",
+            "https://tenor.com/en-IN/view/hinata-mad-gif-23295920",
+            "https://tenor.com/en-IN/view/hinata-gif-26376595",
+            "https://tenor.com/en-IN/view/naruto-hinata-wave-angry-anime-gif-5466688",
+            "https://tenor.com/en-IN/view/hinata-hyuga-naruto-anime-bruh-hinata-gif-21660594",
+            "https://tenor.com/en-IN/view/hinata-hyuga-anime-naruto-happy-gif-11687472",
+            "https://tenor.com/en-IN/view/hinata-naruto-dance-anime-anime-naruto-shippuden-gif-19767475",
+            "https://tenor.com/en-IN/view/hyuuga-hinata-gif-19448448",
+            "https://tenor.com/en-IN/view/hinata-hinata-hyuga-gif-19872336",
+            "https://tenor.com/en-IN/view/hinata-hinata-hyuga-mamahina-drinking-coffee-drinking-gif-24920928",
+            "https://tenor.com/en-IN/view/naruto-shippuden-anime-hinata-hinata-hyuga-smile-gif-17887123",
+            "https://tenor.com/en-IN/view/hinata-hyuga-nami-one-piece-naruto-monkey-d-luffy-gif-23962640",
+            "https://tenor.com/en-IN/view/naruto-naruto-shippuden-hinata-smile-karano-kokoro-gif-22196413",
+            "https://tenor.com/en-IN/view/hinata-waifu-borutl-naruto-gif-9353017",
+            "https://tenor.com/en-IN/view/hinata-final-gif-19631771",
+            "https://tenor.com/en-IN/view/love-naruto-the-last-hinata-gif-13598537",
+            "https://tenor.com/en-IN/view/naruto-hitada-hearts-love-blsuh-gif-14642821",
+            "https://tenor.com/en-IN/view/naruto-gif-19427546",
+            "https://tenor.com/en-IN/view/日向ヒナタ-hinata-hyuga-hyuga-hinata-gif-23231006",
+            "https://tenor.com/en-IN/view/hinata-naruto-anime-dance-water-gif-24091562",
+            "https://tenor.com/en-IN/view/naruto-shippuden-hinata-girl-beautiful-day-gif-21919566",
+            "https://tenor.com/en-IN/view/naruto-hinata-hyuga-anime-manga-japanese-anime-gif-5559574",
+            "https://tenor.com/en-IN/view/anime-naruto-hinata-neji-hyuga-gif-12696645",
+            "https://tenor.com/en-IN/view/sasuke-naruto-shippuden-hinata-hyuga-punch-anime-gif-17277753",
+            "https://tenor.com/en-IN/view/hinata-hinata-hyuga-naruto-naruto-uzumaki-pretty-gif-24920943",
+            "https://tenor.com/en-IN/view/hinata-hinata_edits_kawaiiiii-gif-23255738",
+            "https://tenor.com/en-IN/view/hinata-hinata-hyuga-naruto-waifu-anime-girl-gif-24920884",
+            "https://tenor.com/en-IN/view/naruto-rock-lee-neji-hyuga-hinata-hyuga-kiba-inuzuka-gif-16421959",
+            "https://tenor.com/en-IN/view/naruto-gif-25955872",
+            "https://tenor.com/en-IN/view/yyokage-noah-soundcloud-hokage-prestine-gif-26442302"
             
             ]
         
