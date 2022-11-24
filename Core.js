@@ -2445,6 +2445,23 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
+
+case'admin': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!m.isGroup) return replay(mess.grouponly)
+ if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
+ let teks = `*「 Tag Admins 」*
+  
+ *Message : ${text}*\n\n`
+ for (let mem of groupAdmins) {
+ teks += `🤴 @${mem.split('@')[0]}\n`
+ }
+ Miku.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
+ }
+ break
+
+
  case 'hidetag': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -4730,7 +4747,7 @@ Here's the list of my Commands.
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
-speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
+speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script, admin 
  
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
