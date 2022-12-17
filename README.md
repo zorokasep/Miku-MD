@@ -212,9 +212,7 @@ npm start
 - Tap on `CTRL` button then tap on `C` from keyboard
 
 #### ✧ To start bot again ( While you are inside Miku-MD folder {use `cd Miku-MD` to get inside the folder} )
-- `npm start`
-or use
-- `yarn start`
+- `npm start` or use `yarn start` to start bot again.
 
 
 #### ✧ Start bot after UserLand session is cleared
