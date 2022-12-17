@@ -158,7 +158,7 @@ heroku/nodejs
 ## ✧✧✧ UserLand Deployment Method(Android no root)
 #### ✧ Download `UserLand` application from Google Play Store.
 #### ✧ Install `Debian` terminal in userland.
-#### ✧ After installation follow these commands below one by one (try not to miss any command to avoid error).
+#### ✧ After installation follow these commands below `one by one` (try not to miss any command to avoid error).
 
 ### ✧✧ Need help or having difficulties?
 Follow this video tutotial for UserLand.
