@@ -4872,7 +4872,7 @@ qr, say, translate, fliptext, toletter, weather
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *boytox*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
