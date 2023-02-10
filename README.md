@@ -1,7 +1,7 @@
  https://user-images.githubusercontent.com/96835724/202911067-fbebff62-1566-4120-bd37-08311166b70b.mp4 
 
      
-<h1 align="center"> Miku Nakano (Beta)
+<h1 align="center"> Miku Nakano ( Outdated )
 </h1>
 <p align="center"> 
   Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
@@ -33,12 +33,12 @@
   
 </br>
       
-</br> 
+
    
 ##  This bot is Out- Dated use our latest bot  [Atlas MD](https://github.com/FantoX001/Atlas-MD) to use mind-blowing features including `Economy` and `RPG`.
   - Here's link to [Atlas MD](https://github.com/FantoX001/Atlas-MD)
 </br></br>
-  
+</br> 
   
 ## ✧✧ Setup before deploy (Optional):
 ### Go to `config.js`
