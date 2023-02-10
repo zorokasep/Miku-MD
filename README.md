@@ -33,7 +33,7 @@
       
 </br> 
    
-### ✧✧ Maintained by [Fantox](https://github.com/FantoX001) for bug fixes and more improments. More features  are coming soon. Check this main repo once in week to stay updated about latest updates.
+###  This bot is Out- Dated use our latest bot  [Atlas MD](https://github.com/FantoX001/Atlas-MD) to use mind-blowing features including `Economy` and `RPG`.
 </br></br>
   
   
