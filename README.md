@@ -29,11 +29,14 @@
     <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
   
+
+  
 </br>
       
 </br> 
    
-###  This bot is Out- Dated use our latest bot  [Atlas MD](https://github.com/FantoX001/Atlas-MD) to use mind-blowing features including `Economy` and `RPG`.
+##  This bot is Out- Dated use our latest bot  [Atlas MD](https://github.com/FantoX001/Atlas-MD) to use mind-blowing features including `Economy` and `RPG`.
+  - Here's link to [Atlas MD](https://github.com/FantoX001/Atlas-MD)
 </br></br>
   
   
